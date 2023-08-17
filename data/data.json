@@ -1,32 +1,187 @@
 {
-
-    "propiedades": [
+  "propiedad": [
+    {
+      "id": 1,
+      "dueño": 2,
+      "precio": 250000,
+      "ubicacion": "Ciudad Ejemplo",
+      "superficieTotal": 300,
+      "superficieCubierta": 200,
+      "ambientes": 4,
+      "tipo_de_propiedad": "Casa"
+    },
+    {
+      "id": 2,
+      "dueño": 3,
+      "precio": 180000,
+      "ubicacion": "Barrio Residencial",
+      "superficieTotal": 150,
+      "superficieCubierta": 120,
+      "ambientes": 3,
+      "tipo_de_propiedad": "Departamento"
+    },
+    {
+      "id": 3,
+      "dueño": 4,
+      "precio": 320000,
+      "ubicacion": "Zona Comercial",
+      "superficieTotal": 400,
+      "superficieCubierta": 280,
+      "ambientes": 5,
+      "tipo_de_propiedad": "Casa"
+    },
+    {
+      "id": 4,
+      "dueño": 5,
+      "precio": 150000,
+      "ubicacion": "Suburbio Tranquilo",
+      "superficieTotal": 120,
+      "superficieCubierta": 90,
+      "ambientes": 2,
+      "tipo_de_propiedad": "Departamento"
+    },
+    {
+      "id": 5,
+      "dueño": 6,
+      "precio": 280000,
+      "ubicacion": "Playa Serena",
+      "superficieTotal": 350,
+      "superficieCubierta": 240,
+      "ambientes": 4,
+      "tipo_de_propiedad": "Casa"
+    },
+    {
+      "id": 6,
+      "dueño": 7,
+      "precio": 200000,
+      "ubicacion": "Centro Histórico",
+      "superficieTotal": 110,
+      "superficieCubierta": 90,
+      "ambientes": 3,
+      "tipo_de_propiedad": "Departamento"
+    },
+    {
+      "id": 7,
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "Barrio Exclusivo",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa"
+    },
+    {
+      "id": 8,
+      "dueño": 9,
+      "precio": 220000,
+      "ubicacion": "Zona Financiera",
+      "superficieTotal": 130,
+      "superficieCubierta": 110,
+      "ambientes": 4,
+      "tipo_de_propiedad": "Departamento"
+    },
+    {
+      "id": 9,
+      "dueño": 10,
+      "precio": 320000,
+      "ubicacion": "Barrio Histórico",
+      "superficieTotal": 400,
+      "superficieCubierta": 280,
+      "ambientes": 5,
+      "tipo_de_propiedad": "Casa"
+    },
+    {
+      "id": 10,
+      "dueño": 1,
+      "precio": 190000,
+      "ubicacion": "Zona Residencial",
+      "superficieTotal": 100,
+      "superficieCubierta": 80,
+      "ambientes": 3,
+      "tipo_de_propiedad": "Departamento"
+    }
+  ],
+  
+    "usuario":[
       {
-        "precio": 250000,
-        "ubicacion": "Calle Principal, Ciudad Ejemplo",
-        "tamaño": {
-          "superficie_total": 300,
-          "superficie_cubierta": 200
-        },
-        "tipo_de_propiedad": "Casa"
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "email": "juan@example.com",
+        "contraseña": "contraseña123",
+        "propiedades": []
       },
       {
-        "precio": 120000,
-        "ubicacion": "Avenida Secundaria, Otra Ciudad",
-        "tamaño": {
-          "superficie_total": 150,
-          "superficie_cubierta": 120
-        },
-        "tipo_de_propiedad": "Departamento"
+        "id": 2,
+        "nombre": "María",
+        "apellido": "González",
+        "email": "maria@example.com",
+        "contraseña": "maria456",
+        "propiedades": []
       },
       {
-        "precio": 80000,
-        "ubicacion": "Calle Tranquila, Pueblo",
-        "tamaño": {
-          "superficie_total": 500,
-          "superficie_cubierta": 300
-        },
-        "tipo_de_propiedad": "Casa"
+        "id": 3,
+        "nombre": "Carlos",
+        "apellido": "López",
+        "email": "carlos@example.com",
+        "contraseña": "clave789",
+        "propiedades": []
+      },
+      {
+        "id": 4,
+        "nombre": "Laura",
+        "apellido": "Martínez",
+        "email": "laura@example.com",
+        "contraseña": "laura321",
+        "propiedades": []
+      },
+      {
+        "id": 5,
+        "nombre": "Andrés",
+        "apellido": "Rodríguez",
+        "email": "andres@example.com",
+        "contraseña": "andres567",
+        "propiedades": []
+      },
+      {
+        "id": 6,
+        "nombre": "Ana",
+        "apellido": "Fernández",
+        "email": "ana@example.com",
+        "contraseña": "ana890",
+        "propiedades": []
+      },
+      {
+        "id": 7,
+        "nombre": "Luis",
+        "apellido": "García",
+        "email": "luis@example.com",
+        "contraseña": "luis234",
+        "propiedades": []
+      },
+      {
+        "id": 8,
+        "nombre": "Elena",
+        "apellido": "Pérez",
+        "email": "elena@example.com",
+        "contraseña": "elena567",
+        "propiedades": []
+      },
+      {
+        "id": 9,
+        "nombre": "Diego",
+        "apellido": "Ramírez",
+        "email": "diego@example.com",
+        "contraseña": "diego890",
+        "propiedades": []
+      },
+      {
+        "id": 10,
+        "nombre": "Isabel",
+        "apellido": "Sánchez",
+        "email": "isabel@example.com",
+        "contraseña": "isabel123",
+        "propiedades": []
       }
     ]
-  }
+}
