@@ -1,0 +1,32 @@
+{
+
+    "propiedades": [
+      {
+        "precio": 250000,
+        "ubicacion": "Calle Principal, Ciudad Ejemplo",
+        "tamaño": {
+          "superficie_total": 300,
+          "superficie_cubierta": 200
+        },
+        "tipo_de_propiedad": "Casa"
+      },
+      {
+        "precio": 120000,
+        "ubicacion": "Avenida Secundaria, Otra Ciudad",
+        "tamaño": {
+          "superficie_total": 150,
+          "superficie_cubierta": 120
+        },
+        "tipo_de_propiedad": "Departamento"
+      },
+      {
+        "precio": 80000,
+        "ubicacion": "Calle Tranquila, Pueblo",
+        "tamaño": {
+          "superficie_total": 500,
+          "superficie_cubierta": 300
+        },
+        "tipo_de_propiedad": "Casa"
+      }
+    ]
+  }
