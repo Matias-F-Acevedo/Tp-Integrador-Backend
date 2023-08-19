@@ -1,7 +1,7 @@
 {
   "propiedad": [
     {
-      "id": 1,
+      "id": "1",
       "dueño": 2,
       "precio": 250000,
       "ubicacion": "Ciudad Ejemplo",
@@ -11,7 +11,7 @@
       "tipo_de_propiedad": "Casa"
     },
     {
-      "id": 2,
+      "id": "2",
       "dueño": 3,
       "precio": 180000,
       "ubicacion": "Barrio Residencial",
@@ -21,7 +21,7 @@
       "tipo_de_propiedad": "Departamento"
     },
     {
-      "id": 3,
+      "id": "3",
       "dueño": 4,
       "precio": 320000,
       "ubicacion": "Zona Comercial",
@@ -31,7 +31,7 @@
       "tipo_de_propiedad": "Casa"
     },
     {
-      "id": 4,
+      "id": "4",
       "dueño": 5,
       "precio": 150000,
       "ubicacion": "Suburbio Tranquilo",
@@ -41,7 +41,7 @@
       "tipo_de_propiedad": "Departamento"
     },
     {
-      "id": 5,
+      "id": "5",
       "dueño": 6,
       "precio": 280000,
       "ubicacion": "Playa Serena",
@@ -51,7 +51,7 @@
       "tipo_de_propiedad": "Casa"
     },
     {
-      "id": 6,
+      "id": "6",
       "dueño": 7,
       "precio": 200000,
       "ubicacion": "Centro Histórico",
@@ -61,7 +61,7 @@
       "tipo_de_propiedad": "Departamento"
     },
     {
-      "id": 7,
+      "id": "7",
       "dueño": 8,
       "precio": 380000,
       "ubicacion": "Barrio Exclusivo",
@@ -71,7 +71,7 @@
       "tipo_de_propiedad": "Casa"
     },
     {
-      "id": 8,
+      "id": "8",
       "dueño": 9,
       "precio": 220000,
       "ubicacion": "Zona Financiera",
@@ -81,7 +81,7 @@
       "tipo_de_propiedad": "Departamento"
     },
     {
-      "id": 9,
+      "id": "9",
       "dueño": 10,
       "precio": 320000,
       "ubicacion": "Barrio Histórico",
@@ -91,7 +91,7 @@
       "tipo_de_propiedad": "Casa"
     },
     {
-      "id": 10,
+      "id": "10",
       "dueño": 1,
       "precio": 190000,
       "ubicacion": "Zona Residencial",
@@ -99,89 +99,106 @@
       "superficieCubierta": 80,
       "ambientes": 3,
       "tipo_de_propiedad": "Departamento"
+    },
+    {
+      "id": "5b283d6d-8ff6-4418-9a18-5e84948844e6",
+      "dueño": 2131,
+      "precio": 33424,
+      "ubicacion": "tandil",
+      "superficieTotal": 345345,
+      "superficieCubierta": 345345,
+      "ambientes": 345,
+      "tipo_de_propiedad": "casa"
     }
   ],
-  
-    "usuario":[
-      {
-        "id": 1,
-        "nombre": "Juan",
-        "apellido": "Pérez",
-        "email": "juan@example.com",
-        "contraseña": "contraseña123",
-        "propiedades": []
-      },
-      {
-        "id": 2,
-        "nombre": "María",
-        "apellido": "González",
-        "email": "maria@example.com",
-        "contraseña": "maria456",
-        "propiedades": []
-      },
-      {
-        "id": 3,
-        "nombre": "Carlos",
-        "apellido": "López",
-        "email": "carlos@example.com",
-        "contraseña": "clave789",
-        "propiedades": []
-      },
-      {
-        "id": 4,
-        "nombre": "Laura",
-        "apellido": "Martínez",
-        "email": "laura@example.com",
-        "contraseña": "laura321",
-        "propiedades": []
-      },
-      {
-        "id": 5,
-        "nombre": "Andrés",
-        "apellido": "Rodríguez",
-        "email": "andres@example.com",
-        "contraseña": "andres567",
-        "propiedades": []
-      },
-      {
-        "id": 6,
-        "nombre": "Ana",
-        "apellido": "Fernández",
-        "email": "ana@example.com",
-        "contraseña": "ana890",
-        "propiedades": []
-      },
-      {
-        "id": 7,
-        "nombre": "Luis",
-        "apellido": "García",
-        "email": "luis@example.com",
-        "contraseña": "luis234",
-        "propiedades": []
-      },
-      {
-        "id": 8,
-        "nombre": "Elena",
-        "apellido": "Pérez",
-        "email": "elena@example.com",
-        "contraseña": "elena567",
-        "propiedades": []
-      },
-      {
-        "id": 9,
-        "nombre": "Diego",
-        "apellido": "Ramírez",
-        "email": "diego@example.com",
-        "contraseña": "diego890",
-        "propiedades": []
-      },
-      {
-        "id": 10,
-        "nombre": "Isabel",
-        "apellido": "Sánchez",
-        "email": "isabel@example.com",
-        "contraseña": "isabel123",
-        "propiedades": []
-      }
-    ]
+  "usuario": [
+    {
+      "id": "1",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "email": "juan@example.com",
+      "contraseña": "contraseña123",
+      "propiedades": []
+    },
+    {
+      "id": "2",
+      "nombre": "María",
+      "apellido": "González",
+      "email": "maria@example.com",
+      "contraseña": "maria456",
+      "propiedades": []
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos",
+      "apellido": "López",
+      "email": "carlos@example.com",
+      "contraseña": "clave789",
+      "propiedades": []
+    },
+    {
+      "id": "4",
+      "nombre": "Laura",
+      "apellido": "Martínez",
+      "email": "laura@example.com",
+      "contraseña": "laura321",
+      "propiedades": []
+    },
+    {
+      "id": "5",
+      "nombre": "Andrés",
+      "apellido": "Rodríguez",
+      "email": "andres@example.com",
+      "contraseña": "andres567",
+      "propiedades": []
+    },
+    {
+      "id": "6",
+      "nombre": "Ana",
+      "apellido": "Fernández",
+      "email": "ana@example.com",
+      "contraseña": "ana890",
+      "propiedades": []
+    },
+    {
+      "id": "7",
+      "nombre": "Luis",
+      "apellido": "García",
+      "email": "luis@example.com",
+      "contraseña": "luis234",
+      "propiedades": []
+    },
+    {
+      "id": "8",
+      "nombre": "Elena",
+      "apellido": "Pérez",
+      "email": "elena@example.com",
+      "contraseña": "elena567",
+      "propiedades": []
+    },
+    {
+      "id": "9",
+      "nombre": "Diego",
+      "apellido": "Ramírez",
+      "email": "diego@example.com",
+      "contraseña": "diego890",
+      "propiedades": []
+    },
+    {
+      "id": "10",
+      "nombre": "Isabel",
+      "apellido": "Sánchez",
+      "email": "isabel@example.com",
+      "contraseña": "isabel123",
+      "propiedades": []
+    },
+    {
+      "id": "c9fc3172-44e0-4a59-aa50-5d11e34d2728",
+      "nombre": "hola",
+      "apellido": "como",
+      "email": "juan@example.com",
+      "contraseña": "contraseña123",
+      "propiedades": []
+    }
+  ]
 }
