@@ -1,4 +1,4 @@
-export interface Propiedad {
+export interface Propiedad{
     id: string;
     dueño: number;
     precio: number;

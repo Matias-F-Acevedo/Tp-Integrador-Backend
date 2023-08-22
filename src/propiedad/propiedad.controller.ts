@@ -1,6 +1,11 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Put } from '@nestjs/common';
 import { PropiedadService} from './propiedad.service';
 import { Propiedad } from './propiedad.interface';
+
+
+import db from 'src/firebase/config';
+import { DocumentData } from 'firebase/firestore/lite';
+
 
 @Controller('propiedad')
 export class PropiedadController {
@@ -8,17 +13,20 @@ export class PropiedadController {
     constructor(private readonly PropiedadService: PropiedadService){}
 
     @Get()
-    getPropiedades(): Promise <Propiedad[]>{
-        return this.PropiedadService.getPropiedades();
-    }
-    @Get("/:id")
-    getPropiedadById(@Param("id") id:string): Promise <Propiedad>{
-        return this.PropiedadService.getPropiedadById(id);
+    getPropiedades(): Promise <DocumentData[]>{
+        return this.PropiedadService.getPropiedades(db);
     }
 
+
+    @Get("/:id")
+    getPropiedadById(@Param("id") id:string): Promise <any>{
+        return this.PropiedadService.getPropiedadById(db,id);
+    }
+
+    
     @Post()
     postPropiedad(@Body() propiedad: any){
-    const nuevaPropiedad = this.PropiedadService.postPropiedad(propiedad)
+    const nuevaPropiedad = this.PropiedadService.postPropiedad(db,propiedad)
     return {
     message: 'Data saved',
     propiedad: propiedad,
@@ -27,7 +35,26 @@ export class PropiedadController {
     data: nuevaPropiedad
   }
   }
+
+
+  @Patch("/:id")
+    patchPropiedad(@Param("id") id:string , @Body() body: any, ){
+
+        this.PropiedadService.patchPropiedad(db,body,id)
+       
+  }
+  @Put("/:id")
+    putPropiedad(@Param("id") id:string , @Body() body: any, ){
+
+        this.PropiedadService.putPropiedad(db,body,id)
+       
+  }
+  @Delete("/:id")
+    deletePropiedad(@Param("id") id:string){
+        return this.PropiedadService.deletePropiedad(db,id)
+    }
+
     
-}
+} 
 
 
