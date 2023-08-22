@@ -6,26 +6,26 @@ import { Usuario } from './usuario.interface';
 export class UsuarioController {
     constructor (private readonly UsuarioService: UsuarioService ){}
 
-    @Get()
-    getUsuarios(): Promise <Usuario[]>{
-        return this.UsuarioService.getUsuarios();
-    }
+//     @Get()
+//     getUsuarios(): Promise <Usuario[]>{
+//         return this.UsuarioService.getUsuarios();
+//     }
 
-    @Get("/:id")
-    getUsuarioById(@Param("id") id:string): Promise <Usuario>{
-        return this.UsuarioService.getUsuarioById(id);
-    }
+//     @Get("/:id")
+//     getUsuarioById(@Param("id") id:string): Promise <Usuario>{
+//         return this.UsuarioService.getUsuarioById(id);
+//     }
 
-    @Post()
-    postUsuario(@Body() usuario: any){
-    const nuevoUsuario = this.UsuarioService.postUsuario(usuario)
-    return {
-    message: 'Data saved',
-    usuario: usuario,
-    success: true,
-    code: 201,
-    data: nuevoUsuario
-  }
-  }
+//     @Post()
+//     postUsuario(@Body() usuario: any){
+//     const nuevoUsuario = this.UsuarioService.postUsuario(usuario)
+//     return {
+//     message: 'Data saved',
+//     usuario: usuario,
+//     success: true,
+//     code: 201,
+//     data: nuevoUsuario
+//   }
+//   }
 
 }
