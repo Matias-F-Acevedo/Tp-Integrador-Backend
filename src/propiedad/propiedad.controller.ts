@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, HttpStatus, NotFoundException, BadRequestException, Param, Patch, Post, Put, Res } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpStatus, NotFoundException, BadRequestException, Param, Patch, Post, Put, Res, ValidationPipe } from '@nestjs/common';
 
 import { PropiedadService } from './propiedad.service';
 import { Propiedad } from './propiedad.interface';
