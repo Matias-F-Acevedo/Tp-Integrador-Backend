@@ -1,38 +1,8 @@
 {
   "propiedad": [
     {
-      "id": "1",
-      "dueño": 2,
-      "precio": 250000,
-      "ubicacion": "Ciudad Ejemplo",
-      "superficieTotal": 300,
-      "superficieCubierta": 200,
-      "ambientes": 4,
-      "tipo_de_propiedad": "Casa"
-    },
-    {
-      "id": "2",
-      "dueño": 3,
-      "precio": 180000,
-      "ubicacion": "Barrio Residencial",
-      "superficieTotal": 150,
-      "superficieCubierta": 120,
-      "ambientes": 3,
-      "tipo_de_propiedad": "Departamento"
-    },
-    {
-      "id": "3",
-      "dueño": 4,
-      "precio": 320000,
-      "ubicacion": "Zona Comercial",
-      "superficieTotal": 400,
-      "superficieCubierta": 280,
-      "ambientes": 5,
-      "tipo_de_propiedad": "Casa"
-    },
-    {
       "id": "4",
-      "dueño": 5,
+      "dueño": 453423423,
       "precio": 150000,
       "ubicacion": "Suburbio Tranquilo",
       "superficieTotal": 120,
@@ -109,6 +79,46 @@
       "superficieCubierta": 345345,
       "ambientes": 345,
       "tipo_de_propiedad": "casa"
+    },
+    {
+      "id": "9d5473e0-a0ab-4b0d-96e8-fba8cccbc609",
+      "dueño": 67,
+      "precio": 18,
+      "ubicacion": "hola",
+      "superficieTotal": 1540,
+      "superficieCubierta": 1240,
+      "ambientes": 43,
+      "tipo_de_propiedad": "casa"
+    },
+    {
+      "id": "9c7eaf5e-5e43-4151-8587-569e11b7befc",
+      "precio": 18,
+      "ubicacion": "hola",
+      "superficieTotal": 1540,
+      "superficieCubierta": 1240,
+      "ambientes": 43
+    },
+    {
+      "id": "141ae01c-349f-4530-afc0-550786e0fe78",
+      "precio": 18,
+      "ubicacion": "hola",
+      "superficieTotal": 1540,
+      "superficieCubierta": 1240,
+      "ambientes": 43
+    },
+    {
+      "id": "016a2c98-9fc8-41d4-ba57-f301652d9920",
+      "precio": 18
+    },
+    {
+      "id": "070e9017-36d2-444a-93be-94f1bdf5c0bc",
+      "dueño": 9090909,
+      "precio": 18,
+      "ubicacion": "Barrio Residencial",
+      "superficieTotal": 150,
+      "superficieCubierta": 120,
+      "ambientes": 3,
+      "tipo_de_propiedad": "Departamento"
     }
   ],
   "usuario": [
