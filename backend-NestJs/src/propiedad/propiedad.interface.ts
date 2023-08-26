@@ -1,5 +1,4 @@
 export interface Propiedad {
-    id: string;
     dueño: number;
     precio: number;
     ubicacion: string;
