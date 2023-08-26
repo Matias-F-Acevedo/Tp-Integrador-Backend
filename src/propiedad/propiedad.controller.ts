@@ -3,10 +3,8 @@ import { Body, Controller, Delete, Get, HttpStatus, NotFoundException, BadReques
 import { PropiedadService } from './propiedad.service';
 import { Propiedad } from './propiedad.interface';
 
-import db from 'src/firebase/config';
 import { DocumentData } from 'firebase/firestore/lite';
 import { Response } from 'express';
-import { error } from 'console';
 
 
 @Controller('propiedad')
@@ -17,12 +15,11 @@ export class PropiedadController {
     @Get()
     async getPropiedades(@Res() res: Response) {
         try {
-            const serviceResponse = await this.PropiedadService.getPropiedades(db);
+            const serviceResponse = await this.PropiedadService.getPropiedades();
             return res.status(HttpStatus.OK).json(serviceResponse)
         } catch (error) {
             throw new NotFoundException("Data not found")
         }
-
     }
 
 
@@ -30,7 +27,7 @@ export class PropiedadController {
     @Get("/:id")
     async getPropiedadById(@Res() res: Response, @Param("id") id: string): Promise<DocumentData> {
         try {
-            const serviceResponse = await this.PropiedadService.getPropiedadById(db, id);
+            const serviceResponse = await this.PropiedadService.getPropiedadById( id);
             return res.status(HttpStatus.OK).json(serviceResponse)
         } catch (error) {
             throw new NotFoundException("Data not found")
@@ -40,36 +37,47 @@ export class PropiedadController {
 
     @Post()
     async createPropiedad(@Res() res: Response, @Body() propiedad: any) {
-        try{
-            const serviceResponse = await this.PropiedadService.createPropiedad(db, propiedad)
-            return res.status(HttpStatus.CREATED).send({message:"Created",data:serviceResponse, success:true, code:HttpStatus.CREATED})
-        }catch (error){
+        try {
+            const serviceResponse = await this.PropiedadService.createPropiedad(propiedad)
+            return res.status(HttpStatus.CREATED).send({ message: "Created", data: serviceResponse, success: true, code: HttpStatus.CREATED })
+        } catch (error) {
             throw new BadRequestException("Propiedad creation failed")
         }
-        
-
-     
     }
 
 
     @Patch("/:id")
-    patchPropiedad(@Param("id") id: string, @Body() body: any,) {
-
-        this.PropiedadService.patchPropiedad(db, body, id)
-
+    async patchPropiedad(@Res() res: Response, @Param("id") id: string, @Body() body: any) {
+        try {
+            const serviceResponse = await this.PropiedadService.patchPropiedad(body, id)
+            return res.status(HttpStatus.OK).send({ message: serviceResponse.message, data: body, success: serviceResponse.success, code: HttpStatus.OK})
+        } catch (error) {
+            throw new NotFoundException("Update failed")
+        }
     }
+
+
     @Put("/:id")
-    putPropiedad(@Param("id") id: string, @Body() body: any,) {
-
-        this.PropiedadService.putPropiedad(db, body, id)
-
+    async putPropiedad(@Res() res: Response, @Param("id") id: string, @Body() body: any) {
+        try {
+            const serviceResponse = await this.PropiedadService.putPropiedad(body, id)
+            return res.status(HttpStatus.OK).send({ message: serviceResponse.message, data: body, success: serviceResponse.success, code: HttpStatus.OK})
+        } catch (error) {
+            throw new NotFoundException("Update failed")
+        }
     }
+
+
     @Delete("/:id")
-    deletePropiedad(@Param("id") id: string) {
-        return this.PropiedadService.deletePropiedad(db, id)
+    async deletePropiedad(@Res() res: Response, @Param("id") id: string) {
+        try {
+            const serviceResponse = await this.PropiedadService.deletePropiedad(id)
+            return res.status(HttpStatus.OK).send({ message: serviceResponse.message, success: serviceResponse.success, code: HttpStatus.OK })
+
+        } catch (error) {
+            throw new NotFoundException("Delete failed")
+        }
     }
-
-
 }
 
 
