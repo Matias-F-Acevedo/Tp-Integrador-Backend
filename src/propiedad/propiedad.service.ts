@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { Propiedad } from './propiedad.interface';
 // Firebase:
-import { collection, getDocs, Firestore, DocumentData, addDoc, updateDoc, doc, setDoc, deleteDoc, where, query, getDoc } from 'firebase/firestore/lite';
+import { collection, getDocs, Firestore, DocumentData, addDoc, updateDoc, doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore/lite';
+import { error } from 'console';
 
 
 
@@ -9,55 +10,57 @@ import { collection, getDocs, Firestore, DocumentData, addDoc, updateDoc, doc, s
 @Injectable()
 export class PropiedadService {
 
-   
-    async getPropiedades(db: Firestore): Promise<DocumentData[]> {
+    async getPropiedades(db: Firestore): Promise<any[]> {
         //referencia a la base de datos con la coleccion/array "propiedades"
         const propiedadCollection = collection(db, 'propiedades');
-        // traeme el collecion de la referancia creada anteriormente y guardale en una variable.
-
-        const propiedad = await getDocs(propiedadCollection);
+        // traeme el collecion de la referencia creada anteriormente y guardale en una variable.
+        const docsPropiedad = await getDocs(propiedadCollection);
         // El data() es un método incorporado que nos trae data por cada docuemnto en este caso:
+        const arrayPropiedades: any[] = []
 
-        const propiedades: any[] = []
-
-        propiedad.docs.map(doc => {
-            propiedades.push({
-                // como el id viene separado de la data, creo un objeto en el cual creo una clave id y se le asigno el valor, en cuantoa a la data utilizo el express operator para qe cree una clave por cada una.
+        docsPropiedad.docs.map(doc => {
+            arrayPropiedades.push({
+                // como el id viene separado de la data, creo un objeto en el cual creo una clave id y se le asigno el valor, en cuantoa a la data utilizo el express operator para que cree una clave por cada una.
                 id: doc.id,
                 ...doc.data()
             })
         }
         );
 
-        console.log(propiedades);
-        return propiedades;
+        return arrayPropiedades;
 
     }
 
 
-    async getPropiedadById(db: Firestore, id: string): Promise<any> {
+    async getPropiedadById(db: Firestore, id: string): Promise<DocumentData> {
 
-        const docRef = doc(db, "propiedades", id);
-        const docSnap = await getDoc(docRef);
+        const refDoc = doc(db, "propiedades", id);
+        const docPorId = await getDoc(refDoc);
 
-        if (docSnap.exists()) {
+        if (docPorId.exists()) {
             return (
                 {
-                    id: docSnap.id,
-                    ...docSnap.data()
+                    id: docPorId.id,
+                    ...docPorId.data()
                 }
             )
-        } else {
-            console.log("No existe");
+        } else return new error()
+    }
+
+    async createPropiedad(db: Firestore, propiedad: any):Promise<DocumentData> {
+        try {
+            await addDoc(collection(db, "propiedades"), propiedad);
+        return (
+                {
+                 ...propiedad
+                }
+        );
+        }catch (error){
+            throw new Error("created failed")
         }
-
     }
 
-    async postPropiedad(db: Firestore, propiedad: any) {
-        const docRef = await addDoc(collection(db, "propiedades"), propiedad);
-        console.log(docRef.id);
-        return docRef.id;
-    }
+    
 
     async patchPropiedad(db: Firestore, body: any, id: string) {
 
