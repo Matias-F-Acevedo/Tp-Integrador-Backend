@@ -1,31 +1,42 @@
-import { Controller, Get, Param, Post, Body } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Res, NotFoundException,HttpStatus,BadRequestException } from '@nestjs/common';
 import { UsuarioService } from './usuario.service';
 import { Usuario } from './usuario.interface';
+import { Response } from 'express';
 
 @Controller('usuario')
 export class UsuarioController {
     constructor (private readonly UsuarioService: UsuarioService ){}
 
     @Get()
-    getUsuarios(): Promise <Usuario[]>{
-        return this.UsuarioService.getUsuarios();
+    async getUsuarios(@Res() res: Response){
+        try {
+            const serviceResponse = await this.UsuarioService.getUsuarios();
+            return res.status(HttpStatus.OK).send(serviceResponse)   
+        }catch(error){
+        throw new NotFoundException("Not found")  
+        }
     }
 
     @Get("/:id")
-    getUsuarioById(@Param("id") id:string): Promise <Usuario>{
-        return this.UsuarioService.getUsuarioById(id);
+    async getUsuarioById(@Res() res: Response, @Param("id") id:string){
+        try{
+            const serviceResponse = await this.UsuarioService.getUsuarioById(id);
+            return res.status(HttpStatus.OK).send(serviceResponse)
+        }catch(error){
+            throw new NotFoundException("Not found")
+        }
+        
     }
 
     @Post()
-    postUsuario(@Body() usuario: any){
-    const nuevoUsuario = this.UsuarioService.postUsuario(usuario)
-    return {
-    message: 'Data saved',
-    usuario: usuario,
-    success: true,
-    code: 201,
-    data: nuevoUsuario
+    async postUsuario(@Res() res: Response, @Body() usuario: any){
+
+        try{
+            const serviceResponse = await this.UsuarioService.postUsuario(usuario)
+            return res.status(HttpStatus.CREATED).send({ message: "Created", data: serviceResponse, success: true, code: HttpStatus.CREATED })
+        }catch(error){
+            throw new BadRequestException("Propiedad creation failed")
+        }
   }
   }
 
-}

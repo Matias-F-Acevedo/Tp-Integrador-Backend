@@ -209,6 +209,13 @@
       "email": "juan@example.com",
       "contraseña": "contraseña123",
       "propiedades": []
+    },
+    {
+      "id": "984c08a6-d0e6-43ee-8088-0e614216beb2",
+      "nombre": "marcos",
+      "apellido": "García",
+      "email": "hola.como.andas@gmail.com",
+      "propiedades": []
     }
   ]
 }
