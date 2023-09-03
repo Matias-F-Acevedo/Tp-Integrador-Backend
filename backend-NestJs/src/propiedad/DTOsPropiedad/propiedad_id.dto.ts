@@ -1,7 +1,10 @@
-import { IsInt, IsString, IsOptional, IsNotEmpty, IsNumber } from "class-validator"
+import { IsInt, IsString, IsNotEmpty} from "class-validator"
 import { Expose } from "class-transformer"
 
 export class Propiedad_Id_Dto {
+
+  // Expose: indica que una propiedad de una clase debe ser incluida en las tranformaciones de objetos, habilitadas en el controlador(por supuesto, va en todos, ya que queremos que los identifique del tipo DTO una vez tranformado).
+
   @Expose()
   @IsNotEmpty()
   @IsString()
@@ -24,17 +27,17 @@ export class Propiedad_Id_Dto {
 
   @Expose()
   @IsNotEmpty()
-   @IsInt()
+  @IsInt()
   superficieTotal: number;
 
   @Expose()
   @IsNotEmpty()
-   @IsInt()
+  @IsInt()
   superficieCubierta: number;
 
   @Expose()
   @IsNotEmpty()
-   @IsInt()
+  @IsInt()
   ambientes: number;
 
   @Expose()

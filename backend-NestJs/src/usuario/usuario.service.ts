@@ -1,11 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import * as fs from 'fs'
 import { v4 as uuidv4 } from 'uuid';
-import { join } from 'path'
-import { error } from 'console';
-import { PropiedadDto } from 'src/propiedad/propiedad.dto';
-import { Usuario_id_Dto } from './usuario_id.dto';
-import { UsuarioDto } from './usuario.dto';
+import { Usuario_id_Dto } from './DTOsUsuario/usuario_id.dto';
+import { UsuarioDto } from './DTOsUsuario/usuario.dto';
+
 const URL = "http://localhost:3030/usuario"
 
 
@@ -13,30 +10,30 @@ const URL = "http://localhost:3030/usuario"
 @Injectable()
 export class UsuarioService {
 
-    async getUsuarios():Promise<Usuario_id_Dto[]> {
+    async getUsuarios(): Promise<Usuario_id_Dto[]> {
 
         try {
             const res = await fetch(URL);
             const parsed = await res.json();
-            const arrayPropiedades: Usuario_id_Dto[] = []
-            parsed.map((user: { id: string; nombre: string; apellido: string; email: string; propiedades: number[]}) => {
-                arrayPropiedades.push({
+            const arrayUsuario: Usuario_id_Dto[] = []
+
+            parsed.map((user: { id: string; nombre: string; apellido: string; email: string }) => {
+                arrayUsuario.push({
                     id: user.id,
                     nombre: user.nombre,
                     apellido: user.apellido,
-                    email: user.email,
-                    propiedades: user.propiedades
+                    email: user.email
                 })
             }
             )
-            return arrayPropiedades;
+            return arrayUsuario;
         } catch {
-            throw new error()
+            throw new Error()
         }
 
     }
 
-    async getUsuarioById(id: string):Promise<Usuario_id_Dto> {
+    async getUsuarioById(id: string): Promise<Usuario_id_Dto> {
         const res = await fetch(`${URL}/${id}`);
         if (!res.ok) {
             throw new NotFoundException("Data not found");
@@ -46,8 +43,7 @@ export class UsuarioService {
                 id: parsed.id,
                 nombre: parsed.nombre,
                 apellido: parsed.apellido,
-                email: parsed.email,
-                propiedades: parsed.propiedades
+                email: parsed.email
             };
         }
 
@@ -56,7 +52,7 @@ export class UsuarioService {
 
     async postUsuario(usuario: UsuarioDto) {
         try {
-            const newUsuario = { ...usuario ,id: (uuidv4().slice(0, -28))}
+            const newUsuario = { ...usuario, id: (uuidv4().slice(0, -28)) }
             await fetch(URL, {
                 method: 'POST',
                 headers: {
@@ -64,28 +60,28 @@ export class UsuarioService {
                 },
                 body: JSON.stringify(newUsuario),
             });
-            return {...newUsuario, contraseña: "********"};
+            return { ...newUsuario, contraseña: "********" };
 
         } catch (error) {
             throw new Error("Created failed");
         }
     }
 
-    async deleteUserById(id: string):Promise<{success:boolean, message:string}>{
+    async deleteUserById(id: string): Promise<{ success: boolean, message: string }> {
         const res = await fetch(`${URL}/${id}`, {
             method: 'DELETE',
         });
         if (res.ok) {
-            return { success: true, message: `User with id: {${id}} was deleted`};
+            return { success: true, message: `User with id: {${id}} was deleted` };
         } else {
-            throw new error()
+            throw new Error()
         }
     }
 
-    async updateUserById(id:string, body: any){
+    async updateUserById(id: string, body: UsuarioDto): Promise<{ success: boolean, message: string, data: {} }> {
         const isUser = await this.getUsuarioById(id);
         if (isUser) {
-            const updateUser = {id: id, ...body };
+            const updateUser = { ...body, id: isUser.id };
             await fetch(`${URL}/${id}`, {
                 method: 'PUT',
                 headers: {
@@ -93,9 +89,9 @@ export class UsuarioService {
                 },
                 body: JSON.stringify(updateUser),
             });
-            return { success: true, message: `User edited`, data: `${{...updateUser, contraseña: "********"}}` };
+            return { success: true, message: `User edited`, data: { ...updateUser, contraseña: "********" } };
         } else {
-            throw new error()
+            throw new Error()
         }
     }
 
