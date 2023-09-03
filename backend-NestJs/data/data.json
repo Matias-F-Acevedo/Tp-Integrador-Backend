@@ -1,7 +1,7 @@
 {
   "propiedad": [
     {
-      "id": "4",
+      "id": "2b283d6d",
       "dueño": 453423423,
       "precio": 150000,
       "ubicacion": "Suburbio Tranquilo",
@@ -11,7 +11,7 @@
       "tipo_de_propiedad": "Departamento"
     },
     {
-      "id": "5",
+      "id": "7b283d4d",
       "dueño": 6,
       "precio": 280000,
       "ubicacion": "Playa Serena",
@@ -21,7 +21,7 @@
       "tipo_de_propiedad": "Casa"
     },
     {
-      "id": "6",
+      "id": "1p283d4e",
       "dueño": 7,
       "precio": 200000,
       "ubicacion": "Centro Histórico",
@@ -31,7 +31,7 @@
       "tipo_de_propiedad": "Departamento"
     },
     {
-      "id": "7",
+      "id": "e851a7da",
       "dueño": 8,
       "precio": 380000,
       "ubicacion": "Barrio Exclusivo",
@@ -41,7 +41,7 @@
       "tipo_de_propiedad": "Casa"
     },
     {
-      "id": "8",
+      "id": "37f3e457",
       "dueño": 9,
       "precio": 220000,
       "ubicacion": "Zona Financiera",
@@ -51,7 +51,7 @@
       "tipo_de_propiedad": "Departamento"
     },
     {
-      "id": "9",
+      "id": "bd34f990",
       "dueño": 10,
       "precio": 320000,
       "ubicacion": "Barrio Histórico",
@@ -61,7 +61,7 @@
       "tipo_de_propiedad": "Casa"
     },
     {
-      "id": "10",
+      "id": "4acb8691",
       "dueño": 1,
       "precio": 190000,
       "ubicacion": "Zona Residencial",
@@ -71,7 +71,7 @@
       "tipo_de_propiedad": "Departamento"
     },
     {
-      "id": "5b283d6d-8ff6-4418-9a18-5e84948844e6",
+      "id": "5b283d6d",
       "dueño": 2131,
       "precio": 33424,
       "ubicacion": "tandil",
@@ -81,7 +81,7 @@
       "tipo_de_propiedad": "casa"
     },
     {
-      "id": "9d5473e0-a0ab-4b0d-96e8-fba8cccbc609",
+      "id": "9d5473e0",
       "dueño": 67,
       "precio": 18,
       "ubicacion": "hola",
@@ -91,7 +91,7 @@
       "tipo_de_propiedad": "casa"
     },
     {
-      "id": "9c7eaf5e-5e43-4151-8587-569e11b7befc",
+      "id": "0c7eaf5e",
       "precio": 18,
       "ubicacion": "hola",
       "superficieTotal": 1540,
@@ -99,7 +99,7 @@
       "ambientes": 43
     },
     {
-      "id": "141ae01c-349f-4530-afc0-550786e0fe78",
+      "id": "141ae01c",
       "precio": 18,
       "ubicacion": "hola",
       "superficieTotal": 1540,
@@ -107,11 +107,7 @@
       "ambientes": 43
     },
     {
-      "id": "016a2c98-9fc8-41d4-ba57-f301652d9920",
-      "precio": 18
-    },
-    {
-      "id": "070e9017-36d2-444a-93be-94f1bdf5c0bc",
+      "id": "070e9017",
       "dueño": 9090909,
       "precio": 18,
       "ubicacion": "Barrio Residencial",
@@ -119,6 +115,66 @@
       "superficieCubierta": 120,
       "ambientes": 3,
       "tipo_de_propiedad": "Departamento"
+    },
+    {
+      "id": "0f57041e",
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "Barrio Exclusivo",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa"
+    },
+    {
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "hola",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "4ca9445e"
+    },
+    {
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "hola22",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "a73d7950"
+    },
+    {
+      "dueño": 9,
+      "precio": 380000,
+      "ubicacion": "prueba de id 1",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "daced890"
+    },
+    {
+      "dueño": 120,
+      "precio": 380000,
+      "ubicacion": "prueba de id 2",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "631cf086"
+    },
+    {
+      "dueño": 120,
+      "precio": 380000,
+      "ubicacion": "prueba de id 3",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "cd85e0a6"
     }
   ],
   "usuario": [
@@ -208,6 +264,34 @@
       "apellido": "como",
       "email": "juan@example.com",
       "contraseña": "contraseña123",
+      "propiedades": []
+    },
+    {
+      "id": "984c08a6-d0e6-43ee-8088-0e614216beb2",
+      "nombre": "marcos",
+      "apellido": "García",
+      "email": "hola.como.andas@gmail.com",
+      "propiedades": []
+    },
+    {
+      "id": "4714de34-0cf1-4656-9e64-fa7f84b1cf7d",
+      "nombre": "matias",
+      "apellido": "acevedo",
+      "email": "juan@example.com",
+      "propiedades": []
+    },
+    {
+      "nombre": "matias",
+      "apellido": "hola",
+      "email": "ioluppiop",
+      "propiedades": [],
+      "id": "6d541159-8290-4a2e-b889-25d43ad84054"
+    },
+    {
+      "id": "1e4d0164-1e06-405e-84e2-d6875465acba",
+      "nombre": "matiacomoandas",
+      "apellido": "hola",
+      "email": "ioluppiop",
       "propiedades": []
     }
   ]
