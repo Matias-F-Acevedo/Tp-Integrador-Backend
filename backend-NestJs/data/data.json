@@ -8,7 +8,8 @@
       "superficieTotal": 120,
       "superficieCubierta": 90,
       "ambientes": 2,
-      "tipo_de_propiedad": "Departamento"
+      "tipo_de_propiedad": "Departamento",
+      "estado_de_propiedad": "En alquiler"
     },
     {
       "id": "7b283d4d",
@@ -18,7 +19,8 @@
       "superficieTotal": 350,
       "superficieCubierta": 240,
       "ambientes": 4,
-      "tipo_de_propiedad": "Casa"
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler"
     },
     {
       "id": "1p283d4e",
@@ -28,7 +30,8 @@
       "superficieTotal": 110,
       "superficieCubierta": 90,
       "ambientes": 3,
-      "tipo_de_propiedad": "Departamento"
+      "tipo_de_propiedad": "Departamento",
+      "estado_de_propiedad": "En alquiler"
     },
     {
       "id": "e851a7da",
@@ -38,7 +41,8 @@
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
-      "tipo_de_propiedad": "Casa"
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler"
     },
     {
       "id": "37f3e457",
@@ -48,7 +52,8 @@
       "superficieTotal": 130,
       "superficieCubierta": 110,
       "ambientes": 4,
-      "tipo_de_propiedad": "Departamento"
+      "tipo_de_propiedad": "Departamento",
+      "estado_de_propiedad": "En alquiler"
     },
     {
       "id": "bd34f990",
@@ -58,7 +63,8 @@
       "superficieTotal": 400,
       "superficieCubierta": 280,
       "ambientes": 5,
-      "tipo_de_propiedad": "Casa"
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler"
     },
     {
       "id": "4acb8691",
@@ -68,7 +74,8 @@
       "superficieTotal": 100,
       "superficieCubierta": 80,
       "ambientes": 3,
-      "tipo_de_propiedad": "Departamento"
+      "tipo_de_propiedad": "Departamento",
+      "estado_de_propiedad": "En alquiler"
     },
     {
       "id": "5b283d6d",
@@ -78,7 +85,8 @@
       "superficieTotal": 345345,
       "superficieCubierta": 345345,
       "ambientes": 345,
-      "tipo_de_propiedad": "casa"
+      "tipo_de_propiedad": "casa",
+      "estado_de_propiedad": "En venta"
     },
     {
       "id": "9d5473e0",
@@ -88,23 +96,8 @@
       "superficieTotal": 1540,
       "superficieCubierta": 1240,
       "ambientes": 43,
-      "tipo_de_propiedad": "casa"
-    },
-    {
-      "id": "0c7eaf5e",
-      "precio": 18,
-      "ubicacion": "hola",
-      "superficieTotal": 1540,
-      "superficieCubierta": 1240,
-      "ambientes": 43
-    },
-    {
-      "id": "141ae01c",
-      "precio": 18,
-      "ubicacion": "hola",
-      "superficieTotal": 1540,
-      "superficieCubierta": 1240,
-      "ambientes": 43
+      "tipo_de_propiedad": "casa",
+      "estado_de_propiedad": "En venta"
     },
     {
       "id": "070e9017",
@@ -114,7 +107,8 @@
       "superficieTotal": 150,
       "superficieCubierta": 120,
       "ambientes": 3,
-      "tipo_de_propiedad": "Departamento"
+      "tipo_de_propiedad": "Departamento",
+      "estado_de_propiedad": "En venta"
     },
     {
       "id": "0f57041e",
@@ -124,7 +118,8 @@
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
-      "tipo_de_propiedad": "Casa"
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En venta"
     },
     {
       "dueño": 8,
@@ -134,7 +129,8 @@
       "superficieCubierta": 320,
       "ambientes": 6,
       "tipo_de_propiedad": "Casa",
-      "id": "4ca9445e"
+      "id": "4ca9445e",
+      "estado_de_propiedad": "En venta"
     },
     {
       "dueño": 8,
@@ -144,7 +140,8 @@
       "superficieCubierta": 320,
       "ambientes": 6,
       "tipo_de_propiedad": "Casa",
-      "id": "a73d7950"
+      "id": "a73d7950",
+      "estado_de_propiedad": "En venta"
     },
     {
       "dueño": 9,
@@ -154,7 +151,8 @@
       "superficieCubierta": 320,
       "ambientes": 6,
       "tipo_de_propiedad": "Casa",
-      "id": "daced890"
+      "id": "daced890",
+      "estado_de_propiedad": "En venta"
     },
     {
       "dueño": 120,
@@ -164,7 +162,8 @@
       "superficieCubierta": 320,
       "ambientes": 6,
       "tipo_de_propiedad": "Casa",
-      "id": "631cf086"
+      "id": "631cf086",
+      "estado_de_propiedad": "En venta"
     },
     {
       "id": "cd85e0a6",
@@ -174,7 +173,8 @@
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
-      "tipo_de_propiedad": "Casa"
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En venta"
     },
     {
       "id": "db81847a",
@@ -184,7 +184,30 @@
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
-      "tipo_de_propiedad": "Casa"
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En venta"
+    },
+    {
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "prueba 5",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler",
+      "id": "f09424cc"
+    },
+    {
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "prueba 6",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En venta",
+      "id": "360aa7f6"
     }
   ],
   "usuario": [
@@ -193,80 +216,70 @@
       "nombre": "Juan",
       "apellido": "Pérez",
       "email": "juan@example.com",
-      "contraseña": "contraseña123",
-      "propiedades": []
+      "contraseña": "contraseña123"
     },
     {
       "id": "56445a46",
       "nombre": "María",
       "apellido": "González",
       "email": "maria@example.com",
-      "contraseña": "maria456",
-      "propiedades": []
+      "contraseña": "maria456"
     },
     {
       "id": "f5c70b51",
       "nombre": "Carlos",
       "apellido": "López",
       "email": "carlos@example.com",
-      "contraseña": "clave789",
-      "propiedades": []
+      "contraseña": "clave789"
     },
     {
       "id": "3276ebe4",
       "nombre": "Laura",
       "apellido": "Martínez",
       "email": "laura@example.com",
-      "contraseña": "laura321",
-      "propiedades": []
+      "contraseña": "laura321"
     },
     {
       "id": "b43ab14b",
       "nombre": "Andrés",
       "apellido": "Rodríguez",
       "email": "andres@example.com",
-      "contraseña": "andres567",
-      "propiedades": []
+      "contraseña": "andres567"
     },
     {
       "id": "5d90ee06",
       "nombre": "Ana",
       "apellido": "Fernández",
       "email": "ana@example.com",
-      "contraseña": "ana890",
-      "propiedades": []
+      "contraseña": "ana890"
     },
     {
       "id": "bc7cac59",
       "nombre": "Luis",
       "apellido": "García",
       "email": "luis@example.com",
-      "contraseña": "luis234",
-      "propiedades": []
+      "contraseña": "luis234"
     },
     {
       "id": "3f34aa35",
       "nombre": "Elena",
       "apellido": "Pérez",
       "email": "elena@example.com",
-      "contraseña": "elena567",
-      "propiedades": []
+      "contraseña": "elena567"
     },
     {
       "id": "769aefb0",
       "nombre": "Diego",
       "apellido": "Ramírez",
       "email": "diego@example.com",
-      "contraseña": "diego890",
-      "propiedades": []
+      "contraseña": "diego890"
     },
     {
       "id": "239c938b",
       "nombre": "Isabel",
       "apellido": "Sánchez",
       "email": "isabel@example.com",
-      "contraseña": "isabel123",
-      "propiedades": []
+      "contraseña": "isabel123"
     },
     {
       "nombre": "matias",

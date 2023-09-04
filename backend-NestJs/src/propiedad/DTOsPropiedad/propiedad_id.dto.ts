@@ -1,5 +1,10 @@
-import { IsInt, IsString, IsNotEmpty} from "class-validator"
+import { IsInt, IsString, IsNotEmpty,IsIn} from "class-validator"
 import { Expose } from "class-transformer"
+
+export enum EstadoPropiedad {
+  EnVenta = "En venta",
+  EnAlquiler = "En alquiler"
+}
 
 export class Propiedad_Id_Dto {
 
@@ -44,4 +49,9 @@ export class Propiedad_Id_Dto {
   @IsNotEmpty()
   tipo_de_propiedad: string;
 
+  @Expose()
+  @IsNotEmpty()
+  @IsString()
+  @IsIn([EstadoPropiedad.EnAlquiler,EstadoPropiedad.EnVenta])
+  estado_de_propiedad: EstadoPropiedad;
 }
