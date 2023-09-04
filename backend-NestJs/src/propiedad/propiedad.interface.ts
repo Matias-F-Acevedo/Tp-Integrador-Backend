@@ -7,3 +7,5 @@ export interface Propiedad {
     ambientes: number;
     tipo_de_propiedad: string;
 }
+
+

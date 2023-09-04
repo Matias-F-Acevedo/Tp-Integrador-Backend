@@ -1,10 +1,11 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Propiedad } from './propiedad.interface';
 // import{createID,readParse } from '../utils/utils'
-import * as fs from 'fs'
-import { uuid } from 'uuidv4';
-import { join } from 'path'
+import * as fs from 'fs';
+import {uuid}  from "uuidv4";
+import { join } from 'path';
 import { error } from 'console';
+import { PropiedadDto } from './propiedad.dto';
 
 const URL = "http://localhost:3030/propiedad"
 
@@ -36,7 +37,7 @@ export class PropiedadService {
 
 
 
-    async postPropiedad(propiedad: any) {
+    async postPropiedad(propiedad: PropiedadDto) {
         try {
             const newPropiedad = { id: uuid(), ...propiedad }
             await fetch(URL, {
@@ -46,7 +47,7 @@ export class PropiedadService {
                 },
                 body: JSON.stringify(newPropiedad),
             });
-            return propiedad
+            return newPropiedad
         } catch (error) {
             throw new Error("Created failed");
         }

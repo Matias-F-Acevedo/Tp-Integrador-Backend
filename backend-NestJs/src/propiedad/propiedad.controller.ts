@@ -1,7 +1,8 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Res, HttpStatus, NotFoundException, BadRequestException } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Res, HttpStatus, NotFoundException, BadRequestException, UsePipes, ValidationPipe } from '@nestjs/common';
 import { PropiedadService } from './propiedad.service';
 import { Propiedad } from './propiedad.interface';
 import { Response } from 'express';
+import { PropiedadDto } from './propiedad.dto';
 @Controller('propiedad')
 export class PropiedadController {
 
@@ -31,7 +32,9 @@ export class PropiedadController {
 
 
   @Post()
-  async postPropiedad(@Res() res: Response, @Body() propiedad: any) {
+  
+  @UsePipes(new ValidationPipe({transform: true}))
+  async postPropiedad(@Res() res: Response, @Body() propiedad: PropiedadDto) {
     try {
 
       const serviceResponse = await this.PropiedadService.postPropiedad(propiedad)

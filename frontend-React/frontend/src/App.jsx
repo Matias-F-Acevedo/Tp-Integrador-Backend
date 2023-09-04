@@ -1,8 +1,11 @@
 
-import './App.css'
+// import './App.css'
+// import ComprarPropiedad from './comprar'
+// function App() {
+//   return 
+//   <div>
+//     <ComprarPropiedad></ComprarPropiedad>
+//   </div>
+// }
 
-function App() {
-  return <h1>hola :)</h1>
-}
-
-export default App
+// export default App

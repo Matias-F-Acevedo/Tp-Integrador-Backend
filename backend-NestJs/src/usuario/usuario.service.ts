@@ -1,6 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Usuario } from './usuario.interface';
-import * as fs from 'fs'
 import { uuid } from 'uuidv4';
 import { join } from 'path'
 import { error } from 'console';
@@ -52,7 +51,7 @@ export class UsuarioService {
     }
 
 
-    async postUsuario(usuario: any) {
+    async postUsuario(usuario: Usuario) {
         try {
             const newUsuario = { id: uuid(), ...usuario }
             await fetch(URL, {
