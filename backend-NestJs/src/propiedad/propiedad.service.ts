@@ -1,12 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { PropiedadDto } from './propiedad.dto';
-// import{createID,readParse } from '../utils/utils'
-import * as fs from 'fs'
+import { PropiedadDto } from './DTOsPropiedad/propiedad.dto';
 import { v4 as uuidv4 } from 'uuid';
-import { join } from 'path'
-import { error } from 'console';
-import { Propiedad_Id_Dto } from './propiedad_id.dto';
-import { promises } from 'dns';
+import { Propiedad_Id_Dto } from './DTOsPropiedad/propiedad_id.dto';
+
 
 const URL = "http://localhost:3030/propiedad"
 
@@ -14,22 +10,21 @@ const URL = "http://localhost:3030/propiedad"
 export class PropiedadService {
 
     async getPropiedades():Promise<Propiedad_Id_Dto[]> {
-        try {
-            const res = await fetch(URL);
-            const parsed = await res.json();
+        const res = await fetch(URL);
+        if (!res.ok) {
+          throw new Error()
+        } else {
+            const parsed:Propiedad_Id_Dto[] = await res.json();
             return parsed;
-        } catch {
-            throw new error()
         }
-
     }
 
     async getPropiedadById(id: string):Promise<Propiedad_Id_Dto> {
         const res = await fetch(`${URL}/${id}`);
         if (!res.ok) {
-            throw new NotFoundException("Data not found");
+            throw new Error()
         } else {
-            const parsed = await res.json();
+            const parsed:Propiedad_Id_Dto = await res.json();
             return parsed;
         }
     }
@@ -55,24 +50,24 @@ export class PropiedadService {
     }
 
 
-    async deletePropiedadById(id: string):Promise<{success:boolean,message:string }> {
+    async deletePropiedadById(id: string):Promise<{success:boolean}> {
             const res = await fetch(`${URL}/${id}`, {
                 method: 'DELETE',
             });
 
             if (res.ok) {
-                return { success: true, message: `Propiedad with id: {${id}} was deleted` };
+                return {success: true};
             } else {
-                throw new error()
+                throw new Error()
             }
     }
 
 
-    async updateTrackById(id: string, body:PropiedadDto):Promise<{success:boolean, message:string, data:Propiedad_Id_Dto}> {
-        const isPropiedad = await this.getPropiedadById(id);
+    async updateTrackById(id: string, body:PropiedadDto):Promise<{success:boolean, data:Propiedad_Id_Dto}> {
+        const isPropiedad:Propiedad_Id_Dto = await this.getPropiedadById(id);
 
         if (isPropiedad) {
-            const updatedPropiedad:Propiedad_Id_Dto = { id, ...body };
+            const updatedPropiedad:Propiedad_Id_Dto = { id:isPropiedad.id, ...body };
             await fetch(`${URL}/${id}`, {
                 method: 'PUT',
                 headers: {
@@ -80,9 +75,9 @@ export class PropiedadService {
                 },
                 body: JSON.stringify(updatedPropiedad),
             });
-            return { success: true, message: `Propiedad edited`, data: updatedPropiedad};
+            return { success: true, data: updatedPropiedad};
         } else {
-            throw new error()
+            throw new Error()
         }
     }
 }

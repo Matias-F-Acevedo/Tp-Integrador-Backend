@@ -1,12 +1,7 @@
 import { Expose } from 'class-transformer';
 import { IsNotEmpty, IsString } from 'class-validator';
 
-export class Usuario_id_Dto {
-    @Expose()
-    @IsNotEmpty()
-    @IsString()
-    id: string;
-
+export class UsuarioDto {
     @Expose()
     @IsNotEmpty()
     @IsString()
@@ -21,9 +16,10 @@ export class Usuario_id_Dto {
     @IsNotEmpty()
     @IsString()
     email: string;
-    
 
     @Expose()
     @IsNotEmpty()
-    propiedades: number[];
+    @IsString()
+    contraseña: string;
+
 }

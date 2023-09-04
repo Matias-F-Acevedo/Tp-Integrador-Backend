@@ -167,19 +167,29 @@
       "id": "631cf086"
     },
     {
-      "dueño": 120,
+      "id": "cd85e0a6",
+      "dueño": 8,
       "precio": 380000,
-      "ubicacion": "prueba de id 3",
+      "ubicacion": "prueba 567567",
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
-      "tipo_de_propiedad": "Casa",
-      "id": "cd85e0a6"
+      "tipo_de_propiedad": "Casa"
+    },
+    {
+      "id": "db81847a",
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "prueba 4",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa"
     }
   ],
   "usuario": [
     {
-      "id": "1",
+      "id": "e6d77e80",
       "nombre": "Juan",
       "apellido": "Pérez",
       "email": "juan@example.com",
@@ -187,7 +197,7 @@
       "propiedades": []
     },
     {
-      "id": "2",
+      "id": "56445a46",
       "nombre": "María",
       "apellido": "González",
       "email": "maria@example.com",
@@ -195,7 +205,7 @@
       "propiedades": []
     },
     {
-      "id": "3",
+      "id": "f5c70b51",
       "nombre": "Carlos",
       "apellido": "López",
       "email": "carlos@example.com",
@@ -203,7 +213,7 @@
       "propiedades": []
     },
     {
-      "id": "4",
+      "id": "3276ebe4",
       "nombre": "Laura",
       "apellido": "Martínez",
       "email": "laura@example.com",
@@ -211,7 +221,7 @@
       "propiedades": []
     },
     {
-      "id": "5",
+      "id": "b43ab14b",
       "nombre": "Andrés",
       "apellido": "Rodríguez",
       "email": "andres@example.com",
@@ -219,7 +229,7 @@
       "propiedades": []
     },
     {
-      "id": "6",
+      "id": "5d90ee06",
       "nombre": "Ana",
       "apellido": "Fernández",
       "email": "ana@example.com",
@@ -227,7 +237,7 @@
       "propiedades": []
     },
     {
-      "id": "7",
+      "id": "bc7cac59",
       "nombre": "Luis",
       "apellido": "García",
       "email": "luis@example.com",
@@ -235,7 +245,7 @@
       "propiedades": []
     },
     {
-      "id": "8",
+      "id": "3f34aa35",
       "nombre": "Elena",
       "apellido": "Pérez",
       "email": "elena@example.com",
@@ -243,7 +253,7 @@
       "propiedades": []
     },
     {
-      "id": "9",
+      "id": "769aefb0",
       "nombre": "Diego",
       "apellido": "Ramírez",
       "email": "diego@example.com",
@@ -251,7 +261,7 @@
       "propiedades": []
     },
     {
-      "id": "10",
+      "id": "239c938b",
       "nombre": "Isabel",
       "apellido": "Sánchez",
       "email": "isabel@example.com",
@@ -259,40 +269,18 @@
       "propiedades": []
     },
     {
-      "id": "c9fc3172-44e0-4a59-aa50-5d11e34d2728",
-      "nombre": "hola",
-      "apellido": "como",
-      "email": "juan@example.com",
-      "contraseña": "contraseña123",
-      "propiedades": []
-    },
-    {
-      "id": "984c08a6-d0e6-43ee-8088-0e614216beb2",
-      "nombre": "marcos",
-      "apellido": "García",
-      "email": "hola.como.andas@gmail.com",
-      "propiedades": []
-    },
-    {
-      "id": "4714de34-0cf1-4656-9e64-fa7f84b1cf7d",
       "nombre": "matias",
       "apellido": "acevedo",
-      "email": "juan@example.com",
-      "propiedades": []
+      "email": "matias.acevedo45656@gmail.com",
+      "contraseña": "matias1234",
+      "id": "06ecb7d2"
     },
     {
-      "nombre": "matias",
-      "apellido": "hola",
-      "email": "ioluppiop",
-      "propiedades": [],
-      "id": "6d541159-8290-4a2e-b889-25d43ad84054"
-    },
-    {
-      "id": "1e4d0164-1e06-405e-84e2-d6875465acba",
-      "nombre": "matiacomoandas",
-      "apellido": "hola",
-      "email": "ioluppiop",
-      "propiedades": []
+      "nombre": "marcos",
+      "apellido": "perez",
+      "email": "matias.acevedo45656@gmail.com",
+      "contraseña": "matias1234",
+      "id": "cdc9cc57"
     }
   ]
 }
