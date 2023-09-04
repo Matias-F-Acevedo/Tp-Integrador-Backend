@@ -48,8 +48,8 @@ export class UsuarioController {
   @Delete(":id")
   async deleteUserById(@Res() res: Response, @Param('id') id: string): Promise<Response<{ message: string, success: boolean, code: HttpStatus }>> {
     try {
-      const serviceResponse = await this.UsuarioService.deleteUserById(id);
-      return res.status(HttpStatus.OK).send({ message: serviceResponse.message, success: serviceResponse.success, code: HttpStatus.OK })
+      const serviceResponse:{success:boolean} = await this.UsuarioService.deleteUserById(id);
+      return res.status(HttpStatus.OK).send({ message: `User with id: {${id}} was deleted`, success: serviceResponse.success, code: HttpStatus.OK })
     } catch (error) {
       throw new NotFoundException("Delete failed")
     }
@@ -61,8 +61,8 @@ export class UsuarioController {
   async updateUserById(@Res() res: Response, @Param('id') id: string, @Body() body: UsuarioDto): Promise<Response<{ message: string, success: boolean, code: HttpStatus, data: {} }>> {
     
     try {
-      const serviceResponse: { success: boolean, message: string, data: {} } = await this.UsuarioService.updateUserById(id, body);
-      return res.status(HttpStatus.OK).send({ message: serviceResponse.message, success: serviceResponse.success, code: HttpStatus.OK, data: serviceResponse.data })
+      const serviceResponse: { success: boolean, data: {} } = await this.UsuarioService.updateUserById(id, body);
+      return res.status(HttpStatus.OK).send({message: `User edited`, success: serviceResponse.success, code: HttpStatus.OK, data: serviceResponse.data})
     } catch (error) {
       throw new NotFoundException("Update failed")
     }

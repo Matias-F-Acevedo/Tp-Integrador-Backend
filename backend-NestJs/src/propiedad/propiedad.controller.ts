@@ -63,9 +63,9 @@ export class PropiedadController {
   async deletepropiedadById(@Res() res: Response, @Param('id') id: string): Promise<Response<{ message: string, success: boolean, code: HttpStatus }>> {
     try {
 
-      const serviceResponse:{success: boolean, message: string} = await this.PropiedadService.deletePropiedadById(id);
+      const serviceResponse:{success: boolean} = await this.PropiedadService.deletePropiedadById(id);
 
-      return res.status(HttpStatus.OK).send({ message: serviceResponse.message, success: serviceResponse.success, code: HttpStatus.OK })
+      return res.status(HttpStatus.OK).send({message:`Propiedad with id: {${id}} was deleted`, success: serviceResponse.success, code: HttpStatus.OK })
 
     } catch (error) {
       throw new NotFoundException("Delete failed")
@@ -82,9 +82,9 @@ export class PropiedadController {
 
     try {
 
-      const serviceResponse:{success: boolean, message: string, data: Propiedad_Id_Dto} = await this.PropiedadService.updateTrackById(id, body);
+      const serviceResponse:{success: boolean, data: Propiedad_Id_Dto} = await this.PropiedadService.updateTrackById(id, body);
 
-      return res.status(HttpStatus.OK).send({ message: serviceResponse.message, success: serviceResponse.success, code: HttpStatus.OK, data: serviceResponse.data })
+      return res.status(HttpStatus.OK).send({message: `Propiedad edited`, success: serviceResponse.success, code: HttpStatus.OK, data: serviceResponse.data})
 
     } catch (error) {
       throw new NotFoundException("Update failed")

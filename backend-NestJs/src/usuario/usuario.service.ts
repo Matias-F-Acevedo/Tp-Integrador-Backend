@@ -11,9 +11,10 @@ const URL = "http://localhost:3030/usuario"
 export class UsuarioService {
 
     async getUsuarios(): Promise<Usuario_id_Dto[]> {
-
-        try {
-            const res = await fetch(URL);
+        const res = await fetch(URL);
+        if (!res.ok) {
+            throw new Error()
+        } else {
             const parsed = await res.json();
             const arrayUsuario: Usuario_id_Dto[] = []
 
@@ -27,16 +28,13 @@ export class UsuarioService {
             }
             )
             return arrayUsuario;
-        } catch {
-            throw new Error()
         }
-
     }
 
     async getUsuarioById(id: string): Promise<Usuario_id_Dto> {
         const res = await fetch(`${URL}/${id}`);
         if (!res.ok) {
-            throw new NotFoundException("Data not found");
+            throw new Error();
         } else {
             const parsed = await res.json();
             return {
@@ -67,18 +65,18 @@ export class UsuarioService {
         }
     }
 
-    async deleteUserById(id: string): Promise<{ success: boolean, message: string }> {
+    async deleteUserById(id: string): Promise<{success: boolean}> {
         const res = await fetch(`${URL}/${id}`, {
             method: 'DELETE',
         });
         if (res.ok) {
-            return { success: true, message: `User with id: {${id}} was deleted` };
+            return {success: true};
         } else {
             throw new Error()
         }
     }
 
-    async updateUserById(id: string, body: UsuarioDto): Promise<{ success: boolean, message: string, data: {} }> {
+    async updateUserById(id: string, body: UsuarioDto): Promise<{ success: boolean, data: {} }> {
         const isUser = await this.getUsuarioById(id);
         if (isUser) {
             const updateUser = { ...body, id: isUser.id };
@@ -89,7 +87,7 @@ export class UsuarioService {
                 },
                 body: JSON.stringify(updateUser),
             });
-            return { success: true, message: `User edited`, data: { ...updateUser, contraseña: "********" } };
+            return { success: true, data:{ ...updateUser, contraseña: "********" } };
         } else {
             throw new Error()
         }
