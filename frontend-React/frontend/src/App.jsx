@@ -1,21 +1,43 @@
 
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Navbar from "./components/navBar/Navbar";
-
-
-
+import Home from "./components/home";
+import Alquilar from "./components/alquilar";
+import Comprar from "./components/comprar";
+import Contacto from "./components/Contacto";
+import Login from "./components/Login";
+import Vender from "./components/Vender";
 
 function App() {
-
 
 
     const router = createBrowserRouter([
         {
             path: '/',
-            element: <Navbar/>,
-          
+            element: <Home/>,
+            // errorElement: <Error />,
         },
+        {
+            path: '/comprar',
+            element: <Comprar/>,
+        },
+        {
+            path: '/vender',
+            element: <Vender/>,
+        },
+        {
+            path: '/alquilar',
+            element: <Alquilar/>,
+        },
+        {
+            path: '/login',
+            element: <Login/>,
+        },
+        {
+            path: '/contacto',
+            element: <Contacto/>,
+        },
+
     ]);
 
 
