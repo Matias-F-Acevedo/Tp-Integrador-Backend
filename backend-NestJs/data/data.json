@@ -1,17 +1,6 @@
 {
   "propiedad": [
     {
-      "id": "2b283d6d",
-      "dueño": 453423423,
-      "precio": 150000,
-      "ubicacion": "Suburbio Tranquilo",
-      "superficieTotal": 120,
-      "superficieCubierta": 90,
-      "ambientes": 2,
-      "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En alquiler"
-    },
-    {
       "id": "7b283d4d",
       "dueño": 6,
       "precio": 280000,

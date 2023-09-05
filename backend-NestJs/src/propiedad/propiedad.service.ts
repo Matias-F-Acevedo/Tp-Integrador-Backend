@@ -55,11 +55,9 @@ export class PropiedadService {
                 method: 'DELETE',
             });
 
-            if (res.ok) {
-                return {success: true};
-            } else {
-                throw new Error()
-            }
+            if (!res.ok) throw new Error()
+                
+            return {success: true};
     }
 
 
