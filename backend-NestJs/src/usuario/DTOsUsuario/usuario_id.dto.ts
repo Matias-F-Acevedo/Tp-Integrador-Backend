@@ -22,4 +22,8 @@ export class Usuario_id_Dto {
     @IsString()
     email: string;
     
+    @Expose()
+    @IsNotEmpty()
+    @IsString()
+    contraseña: string;
 }

@@ -283,6 +283,34 @@
       "email": "matias.acevedo45656@gmail.com",
       "contraseña": "matias1234",
       "id": "cdc9cc57"
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "email": "vbcvb",
+      "contraseña": "$2b$08$dOmj.1HN/jjr47ami0vvbOGDlaGBezqmqJrvZKKVmDHyO9Zmay4Za",
+      "id": "009cd464"
+    },
+    {
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "email": "vbcvb",
+      "contraseña": "$2b$08$ewWiWEbb.wMEMbnEOG9hz.UYXyGs/MxRwPU6ldtxQcDTdqcIKhNJO",
+      "id": "cadd0bdf"
+    },
+    {
+      "nombre": "matias",
+      "apellido": "Pérez",
+      "email": "vbcvb",
+      "contraseña": "$2b$08$kGr9BSlVmskNBEGDQnbRaeCUMAUCjJFs/w5blUn3n2isN.JxAbTgq",
+      "id": "47a29ab4"
+    },
+    {
+      "nombre": "matias",
+      "apellido": "acevedo",
+      "email": "vsdfdsfsdfdsfb",
+      "contraseña": "$2b$08$G7jF0rLT1G.OElJjUb8.hO4MIFlG34Mg1EKmt2/1Z5EadUQ5ePdqe",
+      "id": "5fc83c38"
     }
   ]
 }

@@ -33,13 +33,13 @@ export class UsuarioController {
   @Post()
   // habilita la transformacion del objeto al tipo del DTO antes de usarlo en la logica.
   @UsePipes(new ValidationPipe({ transform: true }))
-  async postUsuario(@Res() res: Response, @Body() usuario: UsuarioDto): Promise<Response<{ message: string, data: {}, success: boolean, code: HttpStatus }>> {
+  async postUsuario(@Res() res: Response, @Body() usuario: UsuarioDto): Promise<Response<{message: string, data:Usuario_id_Dto, success: boolean, code: HttpStatus }>> {
 
     try {
-      const serviceResponse = await this.UsuarioService.postUsuario(usuario)
+      const serviceResponse:Usuario_id_Dto = await this.UsuarioService.postUsuario(usuario)
       return res.status(HttpStatus.CREATED).send({ message: "Created", data: serviceResponse, success: true, code: HttpStatus.CREATED })
     } catch (error) {
-      throw new BadRequestException("Propiedad creation failed")
+      throw new BadRequestException("User creation failed")
     }
   }
 

@@ -2,6 +2,8 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { v4 as uuidv4 } from 'uuid';
 import { Usuario_id_Dto } from './DTOsUsuario/usuario_id.dto';
 import { UsuarioDto } from './DTOsUsuario/usuario.dto';
+import {cifrarContraseña} from "../hashContraseña/cifrarContraseña"
+
 
 const URL = "http://localhost:3030/usuario"
 
@@ -15,19 +17,8 @@ export class UsuarioService {
         if (!res.ok) {
             throw new Error()
         } else {
-            const parsed = await res.json();
-            const arrayUsuario: Usuario_id_Dto[] = []
-
-            parsed.map((user: { id: string; nombre: string; apellido: string; email: string }) => {
-                arrayUsuario.push({
-                    id: user.id,
-                    nombre: user.nombre,
-                    apellido: user.apellido,
-                    email: user.email
-                })
-            }
-            )
-            return arrayUsuario;
+            const parsed: Usuario_id_Dto[] = await res.json();
+            return parsed;
         }
     }
 
@@ -36,13 +27,8 @@ export class UsuarioService {
         if (!res.ok) {
             throw new Error();
         } else {
-            const parsed = await res.json();
-            return {
-                id: parsed.id,
-                nombre: parsed.nombre,
-                apellido: parsed.apellido,
-                email: parsed.email
-            };
+            const parsed: Usuario_id_Dto = await res.json();
+            return parsed
         }
 
     }
@@ -50,7 +36,7 @@ export class UsuarioService {
 
     async postUsuario(usuario: UsuarioDto) {
         try {
-            const newUsuario = { ...usuario, id: (uuidv4().slice(0, -28)) }
+            const newUsuario: Usuario_id_Dto ={ ...usuario, id: (uuidv4().slice(0, -28)), contraseña: cifrarContraseña(usuario.contraseña)}
             await fetch(URL, {
                 method: 'POST',
                 headers: {
@@ -58,7 +44,7 @@ export class UsuarioService {
                 },
                 body: JSON.stringify(newUsuario),
             });
-            return { ...newUsuario, contraseña: "********" };
+            return newUsuario;
 
         } catch (error) {
             throw new Error("Created failed");
@@ -87,7 +73,7 @@ export class UsuarioService {
                 },
                 body: JSON.stringify(updateUser),
             });
-            return { success: true, data:{ ...updateUser, contraseña: "********" } };
+            return {success: true, data:{ ...updateUser, contraseña: "********"} };
         } else {
             throw new Error()
         }
