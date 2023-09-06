@@ -201,116 +201,18 @@
   ],
   "usuario": [
     {
-      "id": "e6d77e80",
-      "nombre": "Juan",
-      "apellido": "Pérez",
-      "email": "juan@example.com",
-      "contraseña": "contraseña123"
-    },
-    {
-      "id": "56445a46",
-      "nombre": "María",
-      "apellido": "González",
-      "email": "maria@example.com",
-      "contraseña": "maria456"
-    },
-    {
-      "id": "f5c70b51",
-      "nombre": "Carlos",
-      "apellido": "López",
-      "email": "carlos@example.com",
-      "contraseña": "clave789"
-    },
-    {
-      "id": "3276ebe4",
-      "nombre": "Laura",
-      "apellido": "Martínez",
-      "email": "laura@example.com",
-      "contraseña": "laura321"
-    },
-    {
-      "id": "b43ab14b",
-      "nombre": "Andrés",
-      "apellido": "Rodríguez",
-      "email": "andres@example.com",
-      "contraseña": "andres567"
-    },
-    {
-      "id": "5d90ee06",
-      "nombre": "Ana",
-      "apellido": "Fernández",
-      "email": "ana@example.com",
-      "contraseña": "ana890"
-    },
-    {
-      "id": "bc7cac59",
-      "nombre": "Luis",
-      "apellido": "García",
-      "email": "luis@example.com",
-      "contraseña": "luis234"
-    },
-    {
-      "id": "3f34aa35",
-      "nombre": "Elena",
-      "apellido": "Pérez",
-      "email": "elena@example.com",
-      "contraseña": "elena567"
-    },
-    {
-      "id": "769aefb0",
-      "nombre": "Diego",
-      "apellido": "Ramírez",
-      "email": "diego@example.com",
-      "contraseña": "diego890"
-    },
-    {
-      "id": "239c938b",
-      "nombre": "Isabel",
-      "apellido": "Sánchez",
-      "email": "isabel@example.com",
-      "contraseña": "isabel123"
-    },
-    {
       "nombre": "matias",
       "apellido": "acevedo",
-      "email": "matias.acevedo45656@gmail.com",
-      "contraseña": "matias1234",
-      "id": "06ecb7d2"
+      "email": "matias.acevedo@gmail.com",
+      "contraseña": "$2b$08$hDqsytByq7eYBpKiOIWszeCW3rDWt46HUh5t7HrhPbM4C7GkFPgJS",
+      "id": "1df54a08"
     },
     {
-      "nombre": "marcos",
-      "apellido": "perez",
-      "email": "matias.acevedo45656@gmail.com",
-      "contraseña": "matias1234",
-      "id": "cdc9cc57"
-    },
-    {
-      "nombre": "Juan",
-      "apellido": "Pérez",
-      "email": "vbcvb",
-      "contraseña": "$2b$08$dOmj.1HN/jjr47ami0vvbOGDlaGBezqmqJrvZKKVmDHyO9Zmay4Za",
-      "id": "009cd464"
-    },
-    {
-      "nombre": "Juan",
-      "apellido": "Pérez",
-      "email": "vbcvb",
-      "contraseña": "$2b$08$ewWiWEbb.wMEMbnEOG9hz.UYXyGs/MxRwPU6ldtxQcDTdqcIKhNJO",
-      "id": "cadd0bdf"
-    },
-    {
-      "nombre": "matias",
-      "apellido": "Pérez",
-      "email": "vbcvb",
-      "contraseña": "$2b$08$kGr9BSlVmskNBEGDQnbRaeCUMAUCjJFs/w5blUn3n2isN.JxAbTgq",
-      "id": "47a29ab4"
-    },
-    {
-      "nombre": "matias",
-      "apellido": "acevedo",
-      "email": "vsdfdsfsdfdsfb",
-      "contraseña": "$2b$08$G7jF0rLT1G.OElJjUb8.hO4MIFlG34Mg1EKmt2/1Z5EadUQ5ePdqe",
-      "id": "5fc83c38"
+      "nombre": "pedro",
+      "apellido": "gomez",
+      "email": "pedro.gomez@gmail.com",
+      "contraseña": "$2b$08$VRTH08nZvFFCVOWAg7MopefPkNUhoK34Nk5DXkhsXwV1cQmaAm5WG",
+      "id": "6654ad01"
     }
   ]
 }
