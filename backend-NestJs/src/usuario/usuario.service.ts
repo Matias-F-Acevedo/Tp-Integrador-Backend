@@ -1,14 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-<<<<<<< HEAD
-import { Usuario } from './usuario.interface';
-import { uuid } from 'uuidv4';
-=======
 import * as fs from 'fs'
 import { v4 as uuidv4 } from 'uuid';
->>>>>>> frontend_navbar
 import { join } from 'path'
 import { error } from 'console';
-import { PropiedadDto } from 'src/propiedad/propiedad.dto';
 import { Usuario_id_Dto } from './usuario_id.dto';
 import { UsuarioDto } from './usuario.dto';
 const URL = "http://localhost:3030/usuario"
@@ -59,11 +53,7 @@ export class UsuarioService {
     }
 
 
-<<<<<<< HEAD
-    async postUsuario(usuario: Usuario) {
-=======
     async postUsuario(usuario: UsuarioDto) {
->>>>>>> frontend_navbar
         try {
             const newUsuario = { ...usuario ,id: (uuidv4().slice(0, -28))}
             await fetch(URL, {
