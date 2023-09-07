@@ -1,0 +1,74 @@
+.home-container{
+    background-image: url("https://p4.wallpaperbetter.com/wallpaper/870/309/228/architecture-black-and-white-city-cube-wallpaper-preview.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajusta la altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-weight: bold; /* negrita */
+    margin-bottom: 70px;
+}
+
+.text-container{ 
+    background: rgb(36, 0, 70);
+    height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    margin-bottom: 70px
+}
+
+.text-container2{ 
+    background: rgb(253, 253, 253);
+    height: 140px; 
+    width: 450px;
+    border-radius: 15px;
+    display: flex;
+    color: rgb(0, 0, 0); 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    text-size-adjust: 10px;
+    padding: 10px;
+}
+
+img{
+    border-radius: 15px;
+    width: 350px;
+    height: 200px;
+}
+
+.contact-banner {
+    background-image: url("https://www.canexel.es/wp-content/uploads/2014/04/casa-pasiva-madera.jpg"); /* imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 150px; /* Ajusta la altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-weight: bold; /* negrita */
+        margin-bottom: 70px
+
+  }
+
+  .whatsapp-button {
+    background-color: #1a695c; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .whatsapp-button:hover {
+    background-color: #1f658d; /* Color de fondo al pasar el mouse */
+  }
+  
