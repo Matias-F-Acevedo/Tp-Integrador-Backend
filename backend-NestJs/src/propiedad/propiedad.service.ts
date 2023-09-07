@@ -1,18 +1,19 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Propiedad } from './propiedad.interface';
-// import{createID,readParse } from '../utils/utils'
-import * as fs from 'fs';
-import {uuid}  from "uuidv4";
-import { join } from 'path';
-import { error } from 'console';
 import { PropiedadDto } from './propiedad.dto';
+// import{createID,readParse } from '../utils/utils'
+import * as fs from 'fs'
+import { v4 as uuidv4 } from 'uuid';
+import { join } from 'path'
+import { error } from 'console';
+import { Propiedad_Id_Dto } from './propiedad_id.dto';
+import { promises } from 'dns';
 
 const URL = "http://localhost:3030/propiedad"
 
 @Injectable()
 export class PropiedadService {
 
-    async getPropiedades() {
+    async getPropiedades():Promise<Propiedad_Id_Dto[]> {
         try {
             const res = await fetch(URL);
             const parsed = await res.json();
@@ -23,7 +24,7 @@ export class PropiedadService {
 
     }
 
-    async getPropiedadById(id: string) {
+    async getPropiedadById(id: string):Promise<Propiedad_Id_Dto> {
         const res = await fetch(`${URL}/${id}`);
         if (!res.ok) {
             throw new NotFoundException("Data not found");
@@ -37,9 +38,9 @@ export class PropiedadService {
 
 
 
-    async postPropiedad(propiedad: PropiedadDto) {
+    async postPropiedad(propiedad: PropiedadDto): Promise<Propiedad_Id_Dto> {
         try {
-            const newPropiedad = { id: uuid(), ...propiedad }
+            const newPropiedad:Propiedad_Id_Dto = {...propiedad ,id: (uuidv4().slice(0, -28))}
             await fetch(URL, {
                 method: 'POST',
                 headers: {
@@ -47,14 +48,14 @@ export class PropiedadService {
                 },
                 body: JSON.stringify(newPropiedad),
             });
-            return newPropiedad
+            return newPropiedad;
         } catch (error) {
             throw new Error("Created failed");
         }
     }
 
 
-    async deletePropiedadById(id: string) {
+    async deletePropiedadById(id: string):Promise<{success:boolean,message:string }> {
             const res = await fetch(`${URL}/${id}`, {
                 method: 'DELETE',
             });
@@ -67,10 +68,11 @@ export class PropiedadService {
     }
 
 
-    async updateTrackById(id: string, body: any) {
+    async updateTrackById(id: string, body:PropiedadDto):Promise<{success:boolean, message:string, data:Propiedad_Id_Dto}> {
         const isPropiedad = await this.getPropiedadById(id);
+
         if (isPropiedad) {
-            const updatedPropiedad = { id, ...body };
+            const updatedPropiedad:Propiedad_Id_Dto = { id, ...body };
             await fetch(`${URL}/${id}`, {
                 method: 'PUT',
                 headers: {
@@ -78,7 +80,7 @@ export class PropiedadService {
                 },
                 body: JSON.stringify(updatedPropiedad),
             });
-            return { success: true, message: `Propiedad edited`, data: `${body}` };
+            return { success: true, message: `Propiedad edited`, data: updatedPropiedad};
         } else {
             throw new error()
         }

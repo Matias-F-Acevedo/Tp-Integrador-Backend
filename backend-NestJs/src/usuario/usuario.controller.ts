@@ -1,6 +1,5 @@
-import { Controller, Get, Param, Post, Body, Res, NotFoundException,HttpStatus,BadRequestException } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Res, NotFoundException,HttpStatus,BadRequestException, Delete, Put } from '@nestjs/common';
 import { UsuarioService } from './usuario.service';
-import { Usuario } from './usuario.interface';
 import { Response } from 'express';
 
 @Controller('usuario')
@@ -38,5 +37,29 @@ export class UsuarioController {
             throw new BadRequestException("Propiedad creation failed")
         }
   }
+
+
+
+  @Delete(":id")
+  async deleteUserById(@Res() res: Response, @Param('id') id: string) {
+    try {
+      const serviceResponse = await this.UsuarioService.deleteUserById(id);
+      return res.status(HttpStatus.OK).send({ message: serviceResponse.message, success: serviceResponse.success, code: HttpStatus.OK })
+    } catch (error) {
+      throw new NotFoundException("Delete failed")
+    }
+  }
+
+  @Put(':id')
+  async updateUserById(@Res() res: Response, @Param('id') id: string, @Body() body: any) {
+    try {
+      const serviceResponse = await this.UsuarioService.updateUserById(id, body);
+      return res.status(HttpStatus.OK).send({ message: serviceResponse.message, success: serviceResponse.success, code: HttpStatus.OK, data: serviceResponse.data})
+    } catch (error) {
+      throw new NotFoundException("Update failed")
+    }
+
+  }
+
   }
 

@@ -1,36 +1,52 @@
-import React from 'react';
-import ComprarPropiedad from './componentes/comprar';
-import AlquilarPropiedad from './componentes/alquiler';
-import { createBrowserRouter } from 'react-router-dom';
-import { RouterProvider } from 'react-router-dom';
-import Home from './componentes/home';
+
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from "./components/home";
+import Comprar from "./components/comprar-alquilar/Comprar";
+import Alquilar from "./components/comprar-alquilar/Alquilar";
+import Contacto from "./components/Contacto";
+import Login from "./components/Login";
+import Vender from "./components/Vender";
 
 function App() {
 
 
+    const router = createBrowserRouter([
+        {
+            path: '/',
+            element: <Home/>,
+            // errorElement: <Error />,
+        },
+        {
+            path: '/comprar',
+            element: <Comprar/>,
+        },
+        {
+            path: '/vender',
+            element: <Vender/>,
+        },
+        {
+            path: '/alquilar',
+            element: <Alquilar/>,
+        },
+        {
+            path: '/login',
+            element: <Login/>,
+        },
+        {
+            path: '/contacto',
+            element: <Contacto/>,
+        },
 
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Home/>,
-      exact: true,
-    },
-      {
-          path: '/alquiler',
-          element: <AlquilarPropiedad/>,
-      },
-      {
-          path: '/comprar',
-          element: <ComprarPropiedad/>,
-      },
-
-  ]);
+    ]);
 
 
 
-  return (
-              <RouterProvider router={router} />
-  )
+    return (
+            
+                <RouterProvider router={router} />
+        
+    )
 }
 
 export default App;

@@ -1,17 +1,18 @@
 {
   "propiedad": [
     {
-      "dueño": 1,
-      "precio": 350000,
-      "ubicacion": "Barrio Norte",
-      "superficieTotal": 400,
-      "superficieCubierta": 280,
-      "ambientes": 5,
-      "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En venta"
+      "id": "2b283d6d",
+      "dueño": 453423423,
+      "precio": 150000,
+      "ubicacion": "Suburbio Tranquilo",
+      "superficieTotal": 120,
+      "superficieCubierta": 90,
+      "ambientes": 2,
+      "tipo_de_propiedad": "Departamento"
     },
     {
-      "dueño": 2,
+      "id": "7b283d4d",
+      "dueño": 6,
       "precio": 280000,
       "ubicacion": "Recoleta",
       "superficieTotal": 350,
@@ -61,6 +62,7 @@
       "estado_de_propiedad": "En venta"
     },
     {
+      "id": "1p283d4e",
       "dueño": 7,
       "precio": 260000,
       "ubicacion": "Caballito",
@@ -71,6 +73,7 @@
       "estado_de_propiedad": "En venta"
     },
     {
+      "id": "e851a7da",
       "dueño": 8,
       "precio": 370000,
       "ubicacion": "Nuñez",
@@ -101,248 +104,144 @@
       "estado_de_propiedad": "En venta"
     },
     {
-      "dueño": 11,
-      "precio": 290000,
-      "ubicacion": "Colegiales",
-      "superficieTotal": 320,
-      "superficieCubierta": 240,
-      "ambientes": 4,
-      "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": 12,
-      "precio": 400000,
-      "ubicacion": "Recoleta",
-      "superficieTotal": 420,
-      "superficieCubierta": 310,
-      "ambientes": 5,
-      "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": 13,
+      "id": "37f3e457",
+      "dueño": 9,
       "precio": 220000,
-      "ubicacion": "Villa Urquiza",
-      "superficieTotal": 280,
-      "superficieCubierta": 190,
-      "ambientes": 3,
-      "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": 14,
-      "precio": 360000,
-      "ubicacion": "Palermo",
-      "superficieTotal": 380,
-      "superficieCubierta": 280,
-      "ambientes": 5,
-      "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": 15,
-      "precio": 250000,
-      "ubicacion": "Almagro",
-      "superficieTotal": 300,
-      "superficieCubierta": 220,
+      "ubicacion": "Zona Financiera",
+      "superficieTotal": 130,
+      "superficieCubierta": 110,
       "ambientes": 4,
       "tipo_de_propiedad": "Departamento",
       "estado_de_propiedad": "En venta"
     },
     {
-      "dueño": 16,
-      "precio": 280000,
-      "ubicacion": "Belgrano",
-      "superficieTotal": 340,
-      "superficieCubierta": 250,
-      "ambientes": 4,
-      "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": 17,
-      "precio": 310000,
-      "ubicacion": "Caballito",
-      "superficieTotal": 360,
-      "superficieCubierta": 260,
-      "ambientes": 4,
-      "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": 18,
-      "precio": 190000,
-      "ubicacion": "San Cristobal",
-      "superficieTotal": 240,
-      "superficieCubierta": 180,
-      "ambientes": 3,
-      "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": 19,
-      "precio": 350000,
-      "ubicacion": "Barrio Norte",
+      "id": "bd34f990",
+      "dueño": 10,
+      "precio": 320000,
+      "ubicacion": "Barrio Histórico",
       "superficieTotal": 400,
       "superficieCubierta": 280,
       "ambientes": 5,
       "tipo_de_propiedad": "Casa",
       "estado_de_propiedad": "En venta"
     },
-      {
-        "dueño": 21,
-        "precio": 1800,
-        "ubicacion": "Centro",
-        "superficieTotal": 90,
-        "superficieCubierta": 75,
-        "ambientes": 2,
-        "tipo_de_propiedad": "Apartamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 22,
-        "precio": 2100,
-        "ubicacion": "Nueva Córdoba",
-        "superficieTotal": 110,
-        "superficieCubierta": 95,
-        "ambientes": 3,
-        "tipo_de_propiedad": "Departamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 23,
-        "precio": 1600,
-        "ubicacion": "Villa Crespo",
-        "superficieTotal": 85,
-        "superficieCubierta": 70,
-        "ambientes": 2,
-        "tipo_de_propiedad": "Apartamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 24,
-        "precio": 1900,
-        "ubicacion": "Almagro",
-        "superficieTotal": 100,
-        "superficieCubierta": 80,
-        "ambientes": 3,
-        "tipo_de_propiedad": "Departamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 25,
-        "precio": 2500,
-        "ubicacion": "Palermo",
-        "superficieTotal": 120,
-        "superficieCubierta": 100,
-        "ambientes": 4,
-        "tipo_de_propiedad": "Departamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 26,
-        "precio": 2000,
-        "ubicacion": "San Telmo",
-        "superficieTotal": 95,
-        "superficieCubierta": 75,
-        "ambientes": 2,
-        "tipo_de_propiedad": "Apartamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 27,
-        "precio": 2300,
-        "ubicacion": "Recoleta",
-        "superficieTotal": 110,
-        "superficieCubierta": 90,
-        "ambientes": 3,
-        "tipo_de_propiedad": "Departamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 28,
-        "precio": 1950,
-        "ubicacion": "Belgrano",
-        "superficieTotal": 100,
-        "superficieCubierta": 80,
-        "ambientes": 2,
-        "tipo_de_propiedad": "Apartamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 29,
-        "precio": 1700,
-        "ubicacion": "Caballito",
-        "superficieTotal": 90,
-        "superficieCubierta": 75,
-        "ambientes": 2,
-        "tipo_de_propiedad": "Apartamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 30,
-        "precio": 2100,
-        "ubicacion": "Nuñez",
-        "superficieTotal": 110,
-        "superficieCubierta": 95,
-        "ambientes": 3,
-        "tipo_de_propiedad": "Departamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 31,
-        "precio": 1850,
-        "ubicacion": "San Cristobal",
-        "superficieTotal": 95,
-        "superficieCubierta": 80,
-        "ambientes": 2,
-        "tipo_de_propiedad": "Apartamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 32,
-        "precio": 2250,
-        "ubicacion": "Colegiales",
-        "superficieTotal": 110,
-        "superficieCubierta": 90,
-        "ambientes": 3,
-        "tipo_de_propiedad": "Departamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 33,
-        "precio": 1980,
-        "ubicacion": "Villa Urquiza",
-        "superficieTotal": 100,
-        "superficieCubierta": 80,
-        "ambientes": 3,
-        "tipo_de_propiedad": "Apartamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 34,
-        "precio": 1750,
-        "ubicacion": "Caballito",
-        "superficieTotal": 85,
-        "superficieCubierta": 70,
-        "ambientes": 2,
-        "tipo_de_propiedad": "Apartamento",
-        "estado_de_propiedad": "En alquiler"
-      },
-      {
-        "dueño": 35,
-        "precio": 2200,
-        "ubicacion": "Barrio Norte",
-        "superficieTotal": 110,
-        "superficieCubierta": 90,
-        "ambientes": 3,
-        "tipo_de_propiedad": "Departamento",
-        "estado_de_propiedad": "En alquiler"
-      }
-    
-    
-  
+    {
+      "id": "4acb8691",
+      "dueño": 1,
+      "precio": 190000,
+      "ubicacion": "Zona Residencial",
+      "superficieTotal": 100,
+      "superficieCubierta": 80,
+      "ambientes": 3,
+      "tipo_de_propiedad": "Departamento",
+      "estado_de_propiedad": "En venta"
+    },
+    {
+      "id": "5b283d6d",
+      "dueño": 2131,
+      "precio": 33424,
+      "ubicacion": "tandil",
+      "superficieTotal": 345345,
+      "superficieCubierta": 345345,
+      "ambientes": 345,
+      "tipo_de_propiedad": "casa"
+    },
+    {
+      "id": "9d5473e0",
+      "dueño": 67,
+      "precio": 18,
+      "ubicacion": "hola",
+      "superficieTotal": 1540,
+      "superficieCubierta": 1240,
+      "ambientes": 43,
+      "tipo_de_propiedad": "casa"
+    },
+    {
+      "id": "0c7eaf5e",
+      "precio": 18,
+      "ubicacion": "hola",
+      "superficieTotal": 1540,
+      "superficieCubierta": 1240,
+      "ambientes": 43
+    },
+    {
+      "id": "141ae01c",
+      "precio": 18,
+      "ubicacion": "hola",
+      "superficieTotal": 1540,
+      "superficieCubierta": 1240,
+      "ambientes": 43
+    },
+    {
+      "id": "070e9017",
+      "dueño": 9090909,
+      "precio": 18,
+      "ubicacion": "Barrio Residencial",
+      "superficieTotal": 150,
+      "superficieCubierta": 120,
+      "ambientes": 3,
+      "tipo_de_propiedad": "Departamento"
+    },
+    {
+      "id": "0f57041e",
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "Barrio Exclusivo",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa"
+    },
+    {
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "hola",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "4ca9445e"
+    },
+    {
+      "dueño": 8,
+      "precio": 380000,
+      "ubicacion": "hola22",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "a73d7950"
+    },
+    {
+      "dueño": 9,
+      "precio": 380000,
+      "ubicacion": "prueba de id 1",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "daced890"
+    },
+    {
+      "dueño": 120,
+      "precio": 380000,
+      "ubicacion": "prueba de id 2",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "631cf086"
+    },
+    {
+      "dueño": 120,
+      "precio": 380000,
+      "ubicacion": "prueba de id 3",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "id": "cd85e0a6"
+    }
   ],
   "usuario": [
     {
@@ -438,6 +337,27 @@
       "nombre": "marcos",
       "apellido": "García",
       "email": "hola.como.andas@gmail.com",
+      "propiedades": []
+    },
+    {
+      "id": "4714de34-0cf1-4656-9e64-fa7f84b1cf7d",
+      "nombre": "matias",
+      "apellido": "acevedo",
+      "email": "juan@example.com",
+      "propiedades": []
+    },
+    {
+      "nombre": "matias",
+      "apellido": "hola",
+      "email": "ioluppiop",
+      "propiedades": [],
+      "id": "6d541159-8290-4a2e-b889-25d43ad84054"
+    },
+    {
+      "id": "1e4d0164-1e06-405e-84e2-d6875465acba",
+      "nombre": "matiacomoandas",
+      "apellido": "hola",
+      "email": "ioluppiop",
       "propiedades": []
     }
   ]

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import "./alquiler.css"
+import "./comprar.css"
 const URL = "http://localhost:3000/api/propiedad";
 
-function AlquilarPropiedad() {
+function Comprar() {
   const [propiedades, setPropiedades] = useState([]);
 
   useEffect(() => {
@@ -14,8 +14,8 @@ function AlquilarPropiedad() {
         return res.json();
       })
       .then((data) => {
-        const propiedadesEnAlquiler = data.filter((propiedad) => propiedad.estado_de_propiedad === "En alquiler");
-        setPropiedades(propiedadesEnAlquiler);
+        const propiedadesEnVenta = data.filter((propiedad) => propiedad.estado_de_propiedad === "En venta");
+        setPropiedades(propiedadesEnVenta);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -42,4 +42,4 @@ function AlquilarPropiedad() {
   );
 }
 
-export default AlquilarPropiedad;
+export default Comprar;
