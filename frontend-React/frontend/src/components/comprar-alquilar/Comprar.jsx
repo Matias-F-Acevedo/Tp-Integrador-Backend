@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./comprar.css"
+import Navbar from '../navBar/Navbar';
 const URL = "http://localhost:3000/api/propiedad";
 
 function Comprar() {
@@ -23,6 +24,8 @@ function Comprar() {
   }, []);
 
   return (
+    <>
+    <Navbar></Navbar>
     <div>
       <div className="tarjetas">
         {propiedades.map((propiedad, index) => (
@@ -39,6 +42,7 @@ function Comprar() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
