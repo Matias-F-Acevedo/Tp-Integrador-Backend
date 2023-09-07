@@ -9,8 +9,9 @@ export enum EstadoPropiedad {
 export class PropiedadDto {
   @Expose()
   @IsNotEmpty()
-  @IsInt()
-  dueño: number;
+  @IsString()
+  @Length(8, 8)
+  dueño: string;
 
   @Expose()
   @IsNotEmpty()
