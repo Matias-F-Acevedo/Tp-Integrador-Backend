@@ -1,28 +1,52 @@
-import Home from './components/home';
- import './App.css'
- import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
- function App() {
-     const router = createBrowserRouter([
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from "./components/Home";
+import Alquilar from "./components/alquilar";
+import Comprar from "./components/comprar";
+import Contacto from "./components/Contacto";
+import Login from "./components/Login";
+import Vender from "./components/vender";
+
+function App() {
+
+
+    const router = createBrowserRouter([
         {
             path: '/',
-             element: <Home/>,
-            errorElement: <Error />,
-         },
-     ]);
-     return (
-            <RouterProvider>
+            element: <Home/>,
+            // errorElement: <Error />,
+        },
+        {
+            path: '/comprar',
+            element: <Comprar/>,
+        },
+        {
+            path: '/vender',
+            element: <Vender/>,
+        },
+        {
+            path: '/alquilar',
+            element: <Alquilar/>,
+        },
+        {
+            path: '/login',
+            element: <Login/>,
+        },
+        {
+            path: '/contacto',
+            element: <Contacto/>,
+        },
+
+    ]);
+
+
+
+    return (
+            
                 <RouterProvider router={router} />
-            </RouterProvider>
+        
     )
- }
-export default App
+}
 
-
-// import './App.css'
-
-// function App() {
-//   return <h1>hola :)</h1>
-// }
-
-// export default App
+export default App;

@@ -1,0 +1,119 @@
+.home-container{
+  background-image: url('src/components/home/image-1.svg'), url('src/components/home/image-2.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+    height: 580px; /* Ajusta la altura */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-weight: bold; /* negrita */
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.section1 p {
+  font-size: 30px; /* Ajusta el tamaño de fuente según tus preferencias */
+  margin-bottom: 10px;
+}
+
+.text-container{ 
+    background: rgb(36, 0, 70);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    margin-bottom: 100px
+}
+
+h2{
+  margin-top: 15px;
+  margin-bottom: 18px;
+  font-size: 23px;
+}
+
+.view-button{
+  background-color: #1a695c; 
+    color: white; 
+    padding: 8px 20px; 
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.explore-button{
+  background-color: #247499; 
+    color: white; 
+    padding: 8px 20px; 
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+.text-container2{ 
+    background: rgb(253, 253, 253);
+    height: 230px; 
+    width: 470px;
+    border-radius: 10px;
+    display: flex;
+    color: rgb(0, 0, 0); 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    text-size-adjust: 10px;
+    padding: 10px;
+}
+
+img{
+   border-radius: 25px;    
+   width: 750px;
+   height: 300px;
+}
+
+.section-comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; 
+} 
+
+.section-title-comments {
+  text-align: center;
+}
+
+
+
+.contact-banner {
+    background-image: url("src/components/home/Contact1.jpg"); /* imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 150px; /* Ajusta la altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-weight: bold; /* negrita */
+    margin-bottom: 70px
+
+  }
+
+  .whatsapp-button {
+    background-color: #1a695c; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .whatsapp-button:hover {
+    background-color: #1f658d; /* Color de fondo al pasar el mouse */
+  }
+  
