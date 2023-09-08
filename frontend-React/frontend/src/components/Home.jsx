@@ -7,8 +7,6 @@ const Home = () => {
   return (
     <>
     <Navbar></Navbar> 
-    
-      {/* Sección 1 */}
       <section className="section1">
       <div className="home-container">
           <p>Propiedades en venta y alquiler</p>
@@ -18,7 +16,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sección 2 */}
       <section className="section2">
         <div className="text-container">
           <div className="text-container2">
@@ -30,10 +27,8 @@ const Home = () => {
           </div>
           <img src="src/components/home/Rectangle-5.svg" alt="Propiedad" />
         </div>
-       
       </section>
 
-          {/* Sección 3 */}
           <section className="section3">
         <div className="text-container">
         <img src="src/components/home/Rectangle-4.svg" alt="Propiedad" />
@@ -47,7 +42,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Sección 4 */}
       <section className="section-comments">
         <div className="section-title-comments">
         <h2>Nuestra reputacion esta respaldada por nuestros clientes</h2>
@@ -58,26 +52,21 @@ const Home = () => {
         </div>
       </section>
    
-
-       {/* Sección 5 */}
        <section className="section5">
        <div className="contact-banner">
         <p>
-          En caso de tener alguna duda o problema no dudes en contactarnos
+          En caso de tener alguna duda o problema 
+          <br/>no dudes en contactarnos</p>
           <a
             href="https://wa.me/numero-de-WhatsApp"
             className="whatsapp-button"
             target="_blank" /*indica que debe abrir el enlace en una nueva ventana sin reemplazar la actual.*/
             rel="noopener noreferrer" /* Evita que la página recien abierta tenga acceso a la página de origen. Protege la privacidad del usuario.*/
-          >
-            Contáctenos
-          </a>
-          .
-        </p>
+            >
+            Contacto</a>
       </div>
     </section>
     </>
-
   );
 };
 

@@ -1,7 +1,7 @@
 .home-container{
   background-image: url('src/components/home/image-1.svg'), url('src/components/home/image-2.svg');
   background-repeat: no-repeat, no-repeat;
-  background-position: left top, right top;
+  background-position: -10% 50%, 100% 50%; /* Divide las imágenes en el centro vertical */
     height: 580px; /* Ajusta la altura */
     display: flex;
     justify-content: center;
@@ -28,6 +28,7 @@
     text-align: center;
     color: rgb(255, 255, 255); 
     margin-bottom: 100px
+  
 }
 
 h2{
@@ -67,6 +68,7 @@ h2{
     text-align: center; 
     text-size-adjust: 10px;
     padding: 10px;
+  
 }
 
 img{
@@ -89,19 +91,25 @@ img{
 
 
 .contact-banner {
-    background-image: url("src/components/home/Contact1.jpg"); /* imagen de fondo */
+    background-image: url("src/components/home/Contact7.jpg"); /* imagen de fondo */
     background-size: cover;
     background-position: center;
-    height: 150px; /* Ajusta la altura */
+    height: 190px; /* Ajusta la altura */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     color: rgb(255, 255, 255); 
     font-weight: bold; /* negrita */
-    margin-bottom: 70px
-
+    margin-bottom: 70px;
   }
+
+  .contact-banner p {
+    margin-left: 250px;
+    font-size: 30px;
+    text-align: start;
+  }
+
 
   .whatsapp-button {
     background-color: #1a695c; 
@@ -111,9 +119,18 @@ img{
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    margin-right: 170px;
+    
   }
 
   .whatsapp-button:hover {
-    background-color: #1f658d; /* Color de fondo al pasar el mouse */
+    background-color: #17455f; /* Color de fondo al pasar el mouse */
   }
   
+  .explore-button:hover {
+    background-color: #174864;
+  }
+
+  .view-button:hover{
+    background-color: #08423a; 
+  }
