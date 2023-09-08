@@ -235,6 +235,13 @@
       "email": "pedro.gomez@gmail.com",
       "contraseña": "$2b$08$VRTH08nZvFFCVOWAg7MopefPkNUhoK34Nk5DXkhsXwV1cQmaAm5WG",
       "id": "6654ad01"
+    },
+    {
+      "nombre": "matias",
+      "apellido": "acevedo",
+      "email": "matias.acevedo123@gmail.com",
+      "contraseña": "$2b$08$aokGkvhNEQbYRV1t.5dW0edHM.jprfvV9/gBLjG2a8ftReyMlKxcG",
+      "id": "bed12963"
     }
   ]
 }
