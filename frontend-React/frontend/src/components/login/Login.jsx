@@ -3,8 +3,6 @@ import Navbar from '../navBar/Navbar'
 import "./login.css"
 import { useState, useEffect, useContext } from "react"
 import { UserContext} from "../../context/UserContext";
-import bcrypt from 'bcryptjs';
-
 import {decodeToken}from 'react-jwt'
 
 
@@ -92,7 +90,6 @@ function Login() {
                             <input type="password" value={password} placeholder="Contraseña" onChange={event => setPassword(event.target.value)} />
                             <button type="submit">Iniciar sesión</button>
                         </form>
-                        <button onClick={() => iniciarSesionConGoogle()}>GOOGLE</button>
                     </div>
                 </div>
             }

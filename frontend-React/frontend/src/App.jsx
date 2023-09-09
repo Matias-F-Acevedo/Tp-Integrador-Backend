@@ -1,11 +1,11 @@
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Home from "./components/archivos temporales/Home"
-import Alquilar from "./components/archivos temporales/Alquilar";
-import Comprar from "./components/archivos temporales/Comprar";
-import Contacto from "./components/archivos temporales/Contacto";
+import Home from "./components/home/Home";
+import Alquilar from "./components/comprar-alquilar/Alquilar";
+import Comprar from "./components/comprar-alquilar/Comprar";
+import Contacto from "./components/archivosTemporales/Contacto";
 import Login from "./components/login/Login";
-import Vender from "./components/archivos temporales/Vender";
+import Vender from "./components/vender/vender";
 import MisPropiedades from "./components/misPropiedades/MisPropiedades";
 import { UserProvider } from "./context/UserContext";
 

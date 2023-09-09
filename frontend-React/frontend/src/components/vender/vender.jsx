@@ -1,7 +1,6 @@
-
-
+import './vender.css'
 import React from 'react'
-import Navbar from './navBar/Navbar'
+import Navbar from '../navBar/Navbar'
 
 
 
