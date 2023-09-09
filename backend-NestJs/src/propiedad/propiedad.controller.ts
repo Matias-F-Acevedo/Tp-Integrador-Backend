@@ -1,9 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Res, HttpStatus, NotFoundException, BadRequestException, ValidationPipe, UsePipes } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Res, HttpStatus, NotFoundException, BadRequestException, ValidationPipe, UsePipes,UseGuards } from '@nestjs/common';
 import { PropiedadService } from './propiedad.service';
 import { PropiedadDto } from './propiedad.dto';
 import { Response } from 'express';
 import { Propiedad } from 'src/interface/propiedad.interface';
-
+import { AuthGuard } from 'src/auth/auth.guard';
 
 
 @Controller('propiedad')
@@ -39,7 +39,7 @@ export class PropiedadController {
     }
   }
 
-
+  @UseGuards(AuthGuard)
   @Post()
   // habilita la transformacion del objeto al tipo del DTO antes de usarlo en la logica.
   @UsePipes(new ValidationPipe({ transform: true }))
@@ -58,7 +58,7 @@ export class PropiedadController {
   }
 
 
-
+  @UseGuards(AuthGuard)
   @Delete(":id")
   async deleteById(@Res() res: Response, @Param('id') id: string): Promise<Response<{ message: string, success: boolean, code: HttpStatus }>> {
     try {
@@ -73,7 +73,7 @@ export class PropiedadController {
   }
 
 
-
+  @UseGuards(AuthGuard)
   @Put(':id')
   // habilita la transformacion del objeto al tipo del DTO antes de usarlo en la logica.
   @UsePipes(new ValidationPipe({ transform: true }))

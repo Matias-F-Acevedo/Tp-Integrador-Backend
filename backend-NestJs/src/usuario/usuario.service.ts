@@ -93,7 +93,7 @@ export class UsuarioService {
         };
     }
 
-    async buscarUsuario(email: string):Promise<Usuario_Contraseña>{
+    async searchByEmail(email: string):Promise<Usuario_Contraseña>{
         const res = await fetch(URL);
         if (!res.ok) throw new Error()
 

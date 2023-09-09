@@ -1,8 +1,9 @@
-import { Controller, Get, Param, Post, Body, Res, NotFoundException, HttpStatus, BadRequestException, Delete, Put, ValidationPipe, UsePipes,UnauthorizedException } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Res, NotFoundException, HttpStatus, BadRequestException, Delete, Put, ValidationPipe, UsePipes,UnauthorizedException,UseGuards } from '@nestjs/common';
 import { UsuarioService } from './usuario.service';
 import { Response } from 'express';
 import { UsuarioDto } from './usuario.dto';
 import { Usuario } from 'src/interface/usuario.interface';
+import { AuthGuard } from 'src/auth/auth.guard';
 
 @Controller('usuario')
 export class UsuarioController {
@@ -17,7 +18,8 @@ export class UsuarioController {
       throw new NotFoundException("Not found")
     }
   }
-
+  
+  @UseGuards(AuthGuard)
   @Get("/:id")
   async getById(@Res() res: Response, @Param("id") id: string): Promise<Response<Usuario>> {
 
@@ -29,7 +31,7 @@ export class UsuarioController {
     }
 
   }
-
+  @UseGuards(AuthGuard)
   @Post()
   // habilita la transformacion del objeto al tipo del DTO antes de usarlo en la logica.
   @UsePipes(new ValidationPipe({ transform: true }))
@@ -43,7 +45,7 @@ export class UsuarioController {
     }
   }
 
-  
+  @UseGuards(AuthGuard)
   @Delete(":id")
   async deleteById(@Res() res: Response, @Param('id') id: string): Promise<Response<{ message: string, success: boolean, code: HttpStatus }>> {
     try {
@@ -53,7 +55,7 @@ export class UsuarioController {
       throw new NotFoundException("Delete failed")
     }
   }
-
+  @UseGuards(AuthGuard)
   @Put(':id')
   // habilita la transformacion del objeto al tipo del DTO antes de usarlo en la logica.
   @UsePipes(new ValidationPipe({ transform: true }))
