@@ -1,5 +1,13 @@
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+
+// import Home from "./components/home";
+// import Comprar from "./components/comprar-alquilar/Comprar";
+// import Alquilar from "./components/comprar-alquilar/Alquilar";
+// import Contacto from "./components/Contacto";
+// import Login from "./components/Login";
+// import Vender from "./components/Vender";
+
 import Home from "./components/archivos temporales/Home"
 import Alquilar from "./components/archivos temporales/Alquilar";
 import Comprar from "./components/archivos temporales/Comprar";

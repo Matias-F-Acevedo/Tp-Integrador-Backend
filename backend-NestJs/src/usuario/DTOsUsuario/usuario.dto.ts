@@ -22,9 +22,4 @@ export class UsuarioDto {
     @IsString()
     contraseña: string;
 
-    @Expose()
-    @IsNotEmpty()
-    propiedades: number[];
-
-
 }
