@@ -2,7 +2,7 @@
   "propiedad": [
     {
       "id": "7b283d4d",
-      "dueño": 6,
+      "dueño": "1df54a08",
       "precio": 280000,
       "ubicacion": "Playa Serena",
       "superficieTotal": 350,
@@ -13,7 +13,7 @@
     },
     {
       "id": "1p283d4e",
-      "dueño": 7,
+      "dueño": "1df54a08",
       "precio": 200000,
       "ubicacion": "Centro Histórico",
       "superficieTotal": 110,
@@ -24,7 +24,7 @@
     },
     {
       "id": "e851a7da",
-      "dueño": 8,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "Barrio Exclusivo",
       "superficieTotal": 450,
@@ -35,7 +35,7 @@
     },
     {
       "id": "37f3e457",
-      "dueño": 9,
+      "dueño": "1df54a08",
       "precio": 220000,
       "ubicacion": "Zona Financiera",
       "superficieTotal": 130,
@@ -46,7 +46,7 @@
     },
     {
       "id": "bd34f990",
-      "dueño": 10,
+      "dueño": "1df54a08",
       "precio": 320000,
       "ubicacion": "Barrio Histórico",
       "superficieTotal": 400,
@@ -57,7 +57,7 @@
     },
     {
       "id": "4acb8691",
-      "dueño": 1,
+      "dueño": "1df54a08",
       "precio": 190000,
       "ubicacion": "Zona Residencial",
       "superficieTotal": 100,
@@ -68,7 +68,7 @@
     },
     {
       "id": "5b283d6d",
-      "dueño": 2131,
+      "dueño": "1df54a08",
       "precio": 33424,
       "ubicacion": "tandil",
       "superficieTotal": 345345,
@@ -79,7 +79,7 @@
     },
     {
       "id": "9d5473e0",
-      "dueño": 67,
+      "dueño": "1df54a08",
       "precio": 18,
       "ubicacion": "hola",
       "superficieTotal": 1540,
@@ -90,7 +90,7 @@
     },
     {
       "id": "070e9017",
-      "dueño": 9090909,
+      "dueño": "1df54a08",
       "precio": 18,
       "ubicacion": "Barrio Residencial",
       "superficieTotal": 150,
@@ -101,7 +101,7 @@
     },
     {
       "id": "0f57041e",
-      "dueño": 8,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "Barrio Exclusivo",
       "superficieTotal": 450,
@@ -111,7 +111,7 @@
       "estado_de_propiedad": "En venta"
     },
     {
-      "dueño": 8,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "hola",
       "superficieTotal": 450,
@@ -122,7 +122,7 @@
       "estado_de_propiedad": "En venta"
     },
     {
-      "dueño": 8,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "hola22",
       "superficieTotal": 450,
@@ -133,7 +133,7 @@
       "estado_de_propiedad": "En venta"
     },
     {
-      "dueño": 9,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "prueba de id 1",
       "superficieTotal": 450,
@@ -144,7 +144,7 @@
       "estado_de_propiedad": "En venta"
     },
     {
-      "dueño": 120,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "prueba de id 2",
       "superficieTotal": 450,
@@ -156,7 +156,7 @@
     },
     {
       "id": "cd85e0a6",
-      "dueño": 8,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "prueba 567567",
       "superficieTotal": 450,
@@ -167,7 +167,7 @@
     },
     {
       "id": "db81847a",
-      "dueño": 8,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "prueba 4",
       "superficieTotal": 450,
@@ -177,7 +177,7 @@
       "estado_de_propiedad": "En venta"
     },
     {
-      "dueño": 8,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "prueba 5",
       "superficieTotal": 450,
@@ -188,7 +188,7 @@
       "id": "f09424cc"
     },
     {
-      "dueño": 8,
+      "dueño": "1df54a08",
       "precio": 380000,
       "ubicacion": "prueba 6",
       "superficieTotal": 450,
@@ -197,6 +197,39 @@
       "tipo_de_propiedad": "Casa",
       "estado_de_propiedad": "En venta",
       "id": "360aa7f6"
+    },
+    {
+      "dueño": "6654ad01",
+      "precio": 280000,
+      "ubicacion": "Playa Serena",
+      "superficieTotal": 350,
+      "superficieCubierta": 240,
+      "ambientes": 4,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler",
+      "id": "aaa2f14f"
+    },
+    {
+      "dueño": "6654ad00",
+      "precio": 280000,
+      "ubicacion": "Tandil",
+      "superficieTotal": 350,
+      "superficieCubierta": 240,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler",
+      "id": "14be15e2"
+    },
+    {
+      "dueño": "6654ad00",
+      "precio": 280000,
+      "ubicacion": "prueba auth",
+      "superficieTotal": 350,
+      "superficieCubierta": 240,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler",
+      "id": "c0f98035"
     }
   ],
   "usuario": [
@@ -213,6 +246,13 @@
       "email": "pedro.gomez@gmail.com",
       "contraseña": "$2b$08$VRTH08nZvFFCVOWAg7MopefPkNUhoK34Nk5DXkhsXwV1cQmaAm5WG",
       "id": "6654ad01"
+    },
+    {
+      "nombre": "matias",
+      "apellido": "acevedo",
+      "email": "matias.acevedo123@gmail.com",
+      "contraseña": "$2b$08$aokGkvhNEQbYRV1t.5dW0edHM.jprfvV9/gBLjG2a8ftReyMlKxcG",
+      "id": "bed12963"
     }
   ]
 }

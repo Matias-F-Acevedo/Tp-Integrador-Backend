@@ -1,9 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Res, HttpStatus, NotFoundException, BadRequestException, ValidationPipe, UsePipes } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Res, HttpStatus, NotFoundException, BadRequestException, ValidationPipe, UsePipes,UseGuards } from '@nestjs/common';
 import { PropiedadService } from './propiedad.service';
-import { PropiedadDto } from './DTOsPropiedad/propiedad.dto';
+import { PropiedadDto } from './propiedad.dto';
 import { Response } from 'express';
-import { Propiedad_Id_Dto } from './DTOsPropiedad/propiedad_id.dto';
-
+import { Propiedad } from 'src/interface/propiedad.interface';
+import { AuthGuard } from 'src/auth/auth.guard';
 
 
 @Controller('propiedad')
@@ -12,10 +12,10 @@ export class PropiedadController {
   constructor(private readonly PropiedadService: PropiedadService) { }
 
   @Get()
-  async get(@Res() res: Response): Promise<Response<Propiedad_Id_Dto[]>> {
+  async get(@Res() res: Response): Promise<Response<Propiedad[]>> {
     try {
       
-      const serviceResponse: Propiedad_Id_Dto[] = await this.PropiedadService.get();
+      const serviceResponse: Propiedad[] = await this.PropiedadService.get();
 
       return res.status(HttpStatus.OK).send(serviceResponse)
 
@@ -27,10 +27,10 @@ export class PropiedadController {
 
 
   @Get("/:id")
-  async getById(@Res() res: Response, @Param("id") id: string): Promise<Response<Propiedad_Id_Dto>> {
+  async getById(@Res() res: Response, @Param("id") id: string): Promise<Response<Propiedad>> {
 
     try {
-      const serviceResponse: Propiedad_Id_Dto = await this.PropiedadService.getById(id);
+      const serviceResponse: Propiedad = await this.PropiedadService.getById(id);
 
       return res.status(HttpStatus.OK).send(serviceResponse)
 
@@ -39,15 +39,15 @@ export class PropiedadController {
     }
   }
 
-
+  @UseGuards(AuthGuard)
   @Post()
   // habilita la transformacion del objeto al tipo del DTO antes de usarlo en la logica.
   @UsePipes(new ValidationPipe({ transform: true }))
-  async post(@Res() res: Response, @Body() propiedad: PropiedadDto): Promise<Response<{ message: string, data: Propiedad_Id_Dto, success: boolean, code: HttpStatus }>> {
+  async post(@Res() res: Response, @Body() propiedad: PropiedadDto): Promise<Response<{ message: string, data: Propiedad, success: boolean, code: HttpStatus }>> {
 
     try {
 
-      const serviceResponse: Propiedad_Id_Dto = await this.PropiedadService.post(propiedad)
+      const serviceResponse: Propiedad = await this.PropiedadService.post(propiedad)
 
       return res.status(HttpStatus.CREATED).send({ message: "Created", data: serviceResponse, success: true, code: HttpStatus.CREATED })
 
@@ -58,7 +58,7 @@ export class PropiedadController {
   }
 
 
-
+  @UseGuards(AuthGuard)
   @Delete(":id")
   async deleteById(@Res() res: Response, @Param('id') id: string): Promise<Response<{ message: string, success: boolean, code: HttpStatus }>> {
     try {
@@ -73,16 +73,16 @@ export class PropiedadController {
   }
 
 
-
+  @UseGuards(AuthGuard)
   @Put(':id')
   // habilita la transformacion del objeto al tipo del DTO antes de usarlo en la logica.
   @UsePipes(new ValidationPipe({ transform: true }))
 
-  async updateById(@Res() res: Response, @Param('id') id: string, @Body() body: PropiedadDto): Promise<Response<{ message: string, success: boolean, code: HttpStatus, data: Propiedad_Id_Dto}>> {
+  async updateById(@Res() res: Response, @Param('id') id: string, @Body() body: PropiedadDto): Promise<Response<{ message: string, success: boolean, code: HttpStatus, data: Propiedad}>> {
 
     try {
 
-      const serviceResponse:{success: boolean, data: Propiedad_Id_Dto} = await this.PropiedadService.updateById(id, body);
+      const serviceResponse:{success: boolean, data: Propiedad} = await this.PropiedadService.updateById(id, body);
 
       return res.status(HttpStatus.OK).send({message: `Propiedad edited`, success: serviceResponse.success, code: HttpStatus.OK, data: serviceResponse.data})
 
