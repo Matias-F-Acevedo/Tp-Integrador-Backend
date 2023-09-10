@@ -1,33 +1,24 @@
-import { IsInt, IsString, IsNotEmpty,IsIn} from "class-validator"
-import { Expose } from "class-transformer"
+import { Expose } from 'class-transformer';
+import { IsInt, IsNotEmpty, IsString, Length,IsIn } from 'class-validator';
+import { EstadoPropiedad } from 'src/interface/propiedad.interface';
 
-export enum EstadoPropiedad {
-  EnVenta = "En venta",
-  EnAlquiler = "En alquiler"
-}
 
-export class Propiedad_Id_Dto {
-
-  // Expose: indica que una propiedad de una clase debe ser incluida en las tranformaciones de objetos, habilitadas en el controlador(por supuesto, va en todos, ya que queremos que los identifique del tipo DTO una vez tranformado).
-
+export class PropiedadDto {
   @Expose()
   @IsNotEmpty()
   @IsString()
-  id: string;
+  @Length(8, 8)
+  dueño: string;
 
   @Expose()
   @IsNotEmpty()
   @IsInt()
-  dueño: number;
-
-  @Expose()
-  @IsNotEmpty()
-   @IsInt()
   precio: number;
 
   @Expose()
   @IsNotEmpty()
   @IsString()
+  @Length(4)
   ubicacion: string;
 
   @Expose()
@@ -47,6 +38,8 @@ export class Propiedad_Id_Dto {
 
   @Expose()
   @IsNotEmpty()
+  @IsString()
+  @Length(4, 15)
   tipo_de_propiedad: string;
 
   @Expose()
