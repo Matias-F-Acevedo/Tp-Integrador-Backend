@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Res, HttpStatus, NotFoundException, BadRequestException, ValidationPipe, UsePipes,UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Res, HttpStatus, NotFoundException, BadRequestException, ValidationPipe, UsePipes,UseGuards, Query } from '@nestjs/common';
 import { PropiedadService } from './propiedad.service';
 import { PropiedadDto } from './propiedad.dto';
 import { Response } from 'express';
@@ -12,13 +12,18 @@ export class PropiedadController {
   constructor(private readonly PropiedadService: PropiedadService) { }
 
   @Get()
-  async get(@Res() res: Response): Promise<Response<Propiedad[]>> {
+  async get(@Res() res: Response, @Query('dueño') dueñoPropiedad?:string): Promise<Response<Propiedad[]>> {
+
+
     try {
-      
+      if(!dueñoPropiedad){
       const serviceResponse: Propiedad[] = await this.PropiedadService.get();
-
       return res.status(HttpStatus.OK).send(serviceResponse)
-
+      }
+      
+      const serviceResponse: Propiedad[] = await this.PropiedadService.getByDueño(dueñoPropiedad);
+      return res.status(HttpStatus.OK).send(serviceResponse)
+      
     } catch (error) {
       throw new NotFoundException("Not found")
     }

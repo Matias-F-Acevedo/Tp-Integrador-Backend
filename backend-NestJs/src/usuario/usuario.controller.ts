@@ -9,6 +9,7 @@ import { AuthGuard } from 'src/auth/auth.guard';
 export class UsuarioController {
   constructor(private readonly UsuarioService: UsuarioService) { }
 
+  @UseGuards(AuthGuard)
   @Get()
   async get(@Res() res: Response): Promise<Response<Usuario[]>> {
     try {
@@ -18,7 +19,7 @@ export class UsuarioController {
       throw new NotFoundException("Not found")
     }
   }
-  
+
   @UseGuards(AuthGuard)
   @Get("/:id")
   async getById(@Res() res: Response, @Param("id") id: string): Promise<Response<Usuario>> {
