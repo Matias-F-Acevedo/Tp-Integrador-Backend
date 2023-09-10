@@ -1,5 +1,3 @@
-
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from "./components/home";
 import Comprar from "./components/comprar-alquilar/Comprar";
@@ -7,6 +5,7 @@ import Alquilar from "./components/comprar-alquilar/Alquilar";
 import Contacto from "./components/Contacto";
 import Login from "./components/Login";
 import Vender from "./components/Vender";
+
 
 function App() {
 

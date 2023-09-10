@@ -1,5 +1,5 @@
 export interface Propiedad {
-    dueño: number;
+    propietario: string;
     precio: number;
     ubicacion: string;
     superficieTotal: number;

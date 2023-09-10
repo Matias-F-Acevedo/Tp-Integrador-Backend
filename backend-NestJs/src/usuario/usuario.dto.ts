@@ -28,4 +28,9 @@ export class UsuarioDto {
     @MinLength(5)
     @MaxLength(15)
     contraseña: string;
+
+    @Expose()
+    @IsNotEmpty()
+    @IsString()
+    propiedades: string;
 }

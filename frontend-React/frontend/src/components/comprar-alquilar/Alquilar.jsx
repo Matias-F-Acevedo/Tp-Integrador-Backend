@@ -1,52 +1,66 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../navBar/Navbar';
-const URL = "http://localhost:3000/api/propiedad";
 import Searcher from '../navBar/searcher';
+import "./comprar.css"
+const URL = "http://localhost:3000/api/propiedad";
+
+
 
 function Alquilar() {
   const [propiedades, setPropiedades] = useState([]);
-  const [propiedadesEnVenta, setPropiedadesEnVenta] = useState([]);
+  const [propiedadesEnAlquiler, setPropiedadesEnAlquiler] = useState([]);
 
   const handleSearch = (term) => {
     // Filtra las propiedades según el término de búsqueda (ubicación).
-    const filteredPropiedades = propiedadesEnVenta.filter((propiedad) =>
+    const filteredPropiedades = propiedadesEnAlquiler.filter((propiedad) =>
       propiedad.ubicacion.toLowerCase().includes(term.toLowerCase())
     );
     setPropiedades(filteredPropiedades);
   };
 
   useEffect(() => {
-    fetch(URL)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`Network response was not ok: ${res.status}`);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(URL);
+        if (!response.ok) {
+          throw new Error(`Network response was not ok: ${response.status}`);
         }
-        return res.json();
-      })
-      .then((data) => {
-        const propiedadesEnAlquiler = data.filter((propiedad) => propiedad.estado_de_propiedad === "En alquiler");
-        setPropiedades(propiedadesEnAlquiler);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+        const data = await response.json();
+        const propiedadesEnAlquiler = data.filter(
+          (propiedad) => propiedad.estado_de_propiedad === 'En alquiler'
+        );
+        setPropiedadesEnAlquiler(propiedadesEnAlquiler);
+        setPropiedades(propiedadesEnAlquiler); // Inicialmente, muestra todas las propiedades en venta.
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
     <>
-    <Navbar componentAdditional={<Searcher onSearch={handleSearch} />} ></Navbar>
-    <div>
+    <Navbar componentAdditional={<Searcher onSearch={handleSearch} />} />
+    <div className='contenedor-principal'>
       <div className="tarjetas">
         {propiedades.map((propiedad, index) => (
           <div key={index} className="tarjeta">
-            <h2>{propiedad.nombre}</h2>
-            <p>Dirección: {propiedad.direccion}</p>
-            <p>Precio: {propiedad.precio}</p>
-            <p>Ubicación: {propiedad.ubicacion}</p>
-            <p>Superficie Total: {propiedad.superficieTotal}</p>
-            <p>Superficie Cubierta: {propiedad.superficieCubierta}</p>
-            <p>Ambientes: {propiedad.ambientes}</p>
-            <p>Tipo de Propiedad: {propiedad.tipo_de_propiedad}</p>
+            <div className='div-imagen'>
+              <img className='imagen' src="https://imgar.zonapropcdn.com/avisos/1/00/51/43/07/00/720x532/1861159092.jpg" alt="" />
+            </div>
+            <section className='seccion-estado-ubicacion'>
+            <p>{propiedad.estado_de_propiedad} en {propiedad.ubicacion}</p>
+            </section>
+            <p className='precio'>US$ {propiedad.precio}</p>
+            <section>
+            <article className='seccion-superficie'>{propiedad.superficieTotal} <span className='especificacion-m2'>m2 totales</span></article>
+            <article className='seccion-superficie'>{propiedad.superficieCubierta} <span className='especificacion-m2'>m2 cubiertos</span></article>
+            </section>
+            <section >
+            <p className='seccion-ambientes-tipo'>{propiedad.ambientes} <span className='especificacion-m2'>ambientes</span></p>
+            <p className='seccion-ambientes-tipo'><span className='especificacion-m2'>Tipo:</span > {propiedad.tipo_de_propiedad}</p>
+            </section>
           </div>
         ))}
       </div>

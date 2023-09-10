@@ -8,7 +8,7 @@ export class PropiedadDto {
   @IsNotEmpty()
   @IsString()
   @Length(8, 8)
-  dueño: string;
+  propietario: string;
 
   @Expose()
   @IsNotEmpty()
