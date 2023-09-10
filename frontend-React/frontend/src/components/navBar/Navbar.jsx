@@ -3,15 +3,14 @@ import "./navBar.css"
 import React from 'react'
 import { Link } from "react-router-dom"
 import { useContext, useRef, useState } from "react";
-
+import { UserContext } from '../../context/UserContext';
 
 
 
 
 function Navbar({ componentAdditional }) {
 
-    // const { user, handleLogout } = useContext(true);
-    const [user, setUser] = useState(true);
+    const { user, handleLogout } = useContext(UserContext);
 
     const responsiveMenu = useRef();
 
@@ -44,13 +43,22 @@ function Navbar({ componentAdditional }) {
                     <li><Link to={"/alquilar"}>Alquilar</Link></li>
                     <li><Link to={"/vender"}>Vender</Link></li>
                     <li><Link to={"/contacto"}>Contacto</Link></li>
-
                 </ul>
 
             </nav>
 
             {user ?
-                <button onClick={() => setUser(false)} className="btn btnCloseSession">Cerrar sesión</button>
+
+                <ul className="hola">
+                    <li>Mi cuenta
+                        <ul>
+                            <li><Link to={"/mis-propiedades"}>Mis propiedades</Link></li>
+                            <li><button onClick={handleLogout} className="btn-cerrar">Cerrar sesión</button></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                // <button onClick={handleLogout} className="btn btnCloseSession">Cerrar sesión</button>
                 :
                 <Link to={"/login"} className="btn"><button>Iniciar sesión</button></Link>
             }
@@ -69,7 +77,7 @@ function Navbar({ componentAdditional }) {
                     <li><Link to={"/contacto"}>Contacto</Link></li>
 
                     {user ?
-                        <button onClick={() => setUser(false)} className="btnCloseSession">Cerrar sesión</button>
+                        <button onClick={handleLogout} className="btnCloseSession">Cerrar sesión</button>
                         :
                         <Link to={"/login"} className="btn"><button id="btn-login-menu">Iniciar sesión</button></Link>}
 

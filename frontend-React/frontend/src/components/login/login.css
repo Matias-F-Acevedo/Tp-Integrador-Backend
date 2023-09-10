@@ -1,6 +1,7 @@
+
 .container-login {
     display: flex;
-    background-color: #F3F3F3;
+    background-color: #F1F1F1;
     width: 40%;
     justify-content: center;
     margin: auto;
@@ -14,6 +15,11 @@
     font-size: 25px;
     font-family: Roboto;
     padding-bottom: 4%;
+    background-color:#cad0d965; 
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+
 }
 
 .p-error {
@@ -26,7 +32,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: antiquewhite; */
     height: 300px;
     justify-content: center;
 }
@@ -56,11 +61,12 @@
 .form-login button {
     background-color: #2995C2;
     border-radius: 5px;
-    width: 50%;
+    width: 60%;
     height: 40%;
     border: none;
     color: white;
     font-family: Roboto;
+    font-weight: 600;
 }
 .form-login button:hover {
     background-color: #2995C2;
@@ -71,14 +77,31 @@
     color: white;
 }
 
+.container-general-welcome{
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
 .container-login-welcome {
-    background-color: rgb(243, 240, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2995C2;
     margin: auto;
     width: 50%;
     border-radius: 10px;
-   
+    font-family: Roboto;
+    height: 100px; 
 }
-
+.container-login-welcome h1{
+    font-size: 30px;
+    margin-top: auto;
+}
+.container-login-welcome h2{
+    font-size: 30px;
+    margin-bottom: auto;
+}
 .img-pet-welcome {
     margin: 20px;
     display: flex;
