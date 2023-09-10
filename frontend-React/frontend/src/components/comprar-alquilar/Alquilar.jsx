@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import "./alquiler.css"
 import Navbar from '../navBar/Navbar';
 const URL = "http://localhost:3000/api/propiedad";
+import Searcher from '../navBar/searcher';
 
 function Alquilar() {
   const [propiedades, setPropiedades] = useState([]);
+  const [propiedadesEnVenta, setPropiedadesEnVenta] = useState([]);
+
+  const handleSearch = (term) => {
+    // Filtra las propiedades según el término de búsqueda (ubicación).
+    const filteredPropiedades = propiedadesEnVenta.filter((propiedad) =>
+      propiedad.ubicacion.toLowerCase().includes(term.toLowerCase())
+    );
+    setPropiedades(filteredPropiedades);
+  };
 
   useEffect(() => {
     fetch(URL)
@@ -25,7 +34,7 @@ function Alquilar() {
 
   return (
     <>
-    <Navbar></Navbar>
+    <Navbar componentAdditional={<Searcher onSearch={handleSearch} />} ></Navbar>
     <div>
       <div className="tarjetas">
         {propiedades.map((propiedad, index) => (

@@ -8,7 +8,7 @@ import { useContext, useRef, useState } from "react";
 
 
 
-function Navbar() {
+function Navbar({ componentAdditional }) {
 
     // const { user, handleLogout } = useContext(true);
     const [user, setUser] = useState(true);
@@ -30,6 +30,10 @@ function Navbar() {
         <header className="header">
             <div className="logo">
                 <Link to={"/"}> <img src="src/components/navBar/logo_fondo.jpg" alt="Logo" /></Link>
+            </div>
+            <div className="componentAdditional">
+                {componentAdditional}
+
             </div>
             <nav className="nav">
 
