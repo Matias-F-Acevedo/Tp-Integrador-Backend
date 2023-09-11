@@ -32,7 +32,7 @@ export class UsuarioController {
     }
 
   }
-  @UseGuards(AuthGuard)
+
   @Post()
   // habilita la transformacion del objeto al tipo del DTO antes de usarlo en la logica.
   @UsePipes(new ValidationPipe({ transform: true }))

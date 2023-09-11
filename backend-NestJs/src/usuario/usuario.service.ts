@@ -42,6 +42,8 @@ export class UsuarioService {
 
     async post(usuario: UsuarioDto): Promise<Usuario> {
         try {
+            const comprobarExistencia = await this.searchByEmail(usuario.email)
+            if(comprobarExistencia) throw new Error("This email is registered");
             const newUsuario = { ...usuario, id: (uuidv4().slice(0, -28)),contraseña: bcrypt.hashSync(usuario.contraseña,8) }
             await fetch(URL, {
                 method: 'POST',

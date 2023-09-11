@@ -12,7 +12,9 @@ export class AuthService {
 
     async login(email:string, contraseñaParametro:string):Promise<{access_token: string}>{
         const usuario = await this.usuarioService.searchByEmail(email);
-
+        // undefined:
+        if(!usuario)throw new Error();
+        // contraseña incorrecta:
         if(!bcrypt.compareSync(contraseñaParametro, usuario.contraseña)){    throw new Error();
         }
         // aclaracion: la propiedad "sub" es por el estandar que propone JWT

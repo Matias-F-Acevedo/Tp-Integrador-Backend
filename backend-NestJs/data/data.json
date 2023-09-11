@@ -1,26 +1,15 @@
 {
   "propiedad": [
     {
-      "id": "7b283d4d",
       "dueño": "1df54a08",
-      "precio": 280000,
-      "ubicacion": "Playa Serena",
-      "superficieTotal": 350,
-      "superficieCubierta": 240,
-      "ambientes": 4,
-      "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En alquiler"
-    },
-    {
-      "id": "1p283d4e",
-      "dueño": "1df54a08",
-      "precio": 200000,
+      "precio": 22,
       "ubicacion": "Centro Histórico",
       "superficieTotal": 110,
       "superficieCubierta": 90,
       "ambientes": 3,
       "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En alquiler"
+      "estado_de_propiedad": "En alquiler",
+      "id": "1p283d4e"
     },
     {
       "id": "e851a7da",
@@ -239,20 +228,6 @@
       "email": "matias.acevedo@gmail.com",
       "contraseña": "$2b$08$hDqsytByq7eYBpKiOIWszeCW3rDWt46HUh5t7HrhPbM4C7GkFPgJS",
       "id": "1df54a08"
-    },
-    {
-      "nombre": "pedro",
-      "apellido": "gomez",
-      "email": "pedro.gomez@gmail.com",
-      "contraseña": "$2b$08$VRTH08nZvFFCVOWAg7MopefPkNUhoK34Nk5DXkhsXwV1cQmaAm5WG",
-      "id": "6654ad01"
-    },
-    {
-      "nombre": "matias",
-      "apellido": "acevedo",
-      "email": "matias.acevedo123@gmail.com",
-      "contraseña": "$2b$08$aokGkvhNEQbYRV1t.5dW0edHM.jprfvV9/gBLjG2a8ftReyMlKxcG",
-      "id": "bed12963"
     }
   ]
 }
