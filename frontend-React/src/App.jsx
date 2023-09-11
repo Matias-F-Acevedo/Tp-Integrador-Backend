@@ -5,7 +5,6 @@ import Alquilar from "./components/comprar-alquilar/Alquilar";
 import Comprar from "./components/comprar-alquilar/Comprar";
 import Contacto from "./components/contacto/Contacto";
 import Login from "./components/login/Login";
-import Vender from "./components/vender/vender";
 import MisPropiedades from "./components/misPropiedades/MisPropiedades";
 import { UserProvider } from "./context/UserContext";
 import ProtectedRouter from "./components/utils/ProtectedRoute";
@@ -20,7 +19,6 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/comprar" element={<Comprar />} />
-                    <Route path="/vender" element={<Vender />} />
                     <Route path="/alquilar" element={<Alquilar />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/contacto" element={<Contacto />} />

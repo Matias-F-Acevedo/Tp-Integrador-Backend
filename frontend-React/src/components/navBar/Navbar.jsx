@@ -40,7 +40,6 @@ function Navbar({ componentAdditional }) {
                     <li><Link to={"/"}>Home</Link></li>
                     <li><Link to={"/comprar"}>Comprar</Link></li>
                     <li><Link to={"/alquilar"}>Alquilar</Link></li>
-                    <li><Link to={"/vender"}>Vender</Link></li>
                     <li><Link to={"/contacto"}>Contacto</Link></li>
                 </ul>
 
@@ -72,7 +71,6 @@ function Navbar({ componentAdditional }) {
                     <li><Link to={"/"}>Home</Link></li>
                     <li><Link to={"/comprar"}>Comprar</Link></li>
                     <li><Link to={"/alquilar"}>Alquilar</Link></li>
-                    <li><Link to={"/vender"}>Vender</Link></li>
                     <li><Link to={"/contacto"}>Contacto</Link></li>
 
                     {user ?

@@ -9,8 +9,8 @@ export default function CardComments({stars, name, bday, text, img}) {
   return (
     <div className="card-container">
       <div className="star-container">
-        {quantityStars && quantityStars.map((el) => (
-            <BsFillStarFill size={30} color="#efb810" key={el} />
+        {quantityStars && quantityStars.map((el,index) => (
+            <BsFillStarFill size={30} color="#efb810" key={index} />
         ))}
       </div>
       <h3>{name}<span className="bday">{bday}</span></h3>
