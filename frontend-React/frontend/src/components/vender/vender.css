@@ -1,18 +1,35 @@
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
+.form-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  text-align: center; 
+  margin: 0 auto; 
+  max-width: 1400px;
+
+   
+}
+
+.form-vender {
+  width: 45%;
+
+  text-align: center; 
+   margin: 0 auto;
+    padding: 40px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
   }
 
-  .form-vender {
-    text-align: center; 
+  
+
+.form-vender h1{
+  font-size: 45px;
 }
 
   .form-vender p {
-    margin: 0 auto; /* Esto centra el párrafo horizontalmente dentro del contenedor */
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
 
   h1 {
@@ -28,7 +45,7 @@ form {
   .form-element {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 16px;
@@ -69,4 +86,8 @@ form {
     width: 100%;
   }
   
- 
+  .imag-form{
+    width: 45%;
+    height: auto; 
+    margin-bottom: 20px;
+  }
