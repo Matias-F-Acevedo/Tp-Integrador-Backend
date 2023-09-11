@@ -5,7 +5,7 @@ export interface Usuario {
     email: string;
 }
 
-export interface Usuario_Contraseña {
+export interface UsuarioCompleto {
     id:string;
     nombre: string;
     apellido: string;

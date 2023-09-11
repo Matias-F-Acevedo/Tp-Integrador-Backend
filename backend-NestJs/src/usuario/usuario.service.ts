@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { v4 as uuidv4 } from 'uuid';
 import { UsuarioDto } from './usuario.dto';
-import { Usuario, Usuario_Contraseña } from 'src/interface/usuario.interface';
+import { Usuario, UsuarioCompleto } from 'src/interface/usuario.interface';
 import * as bcrypt from 'bcrypt';
 const URL = "http://localhost:3030/usuario"
 
@@ -95,12 +95,12 @@ export class UsuarioService {
         };
     }
 
-    async searchByEmail(email: string):Promise<Usuario_Contraseña>{
+    async searchByEmail(email: string):Promise<UsuarioCompleto>{
         const res = await fetch(URL);
         if (!res.ok) throw new Error()
 
         const usuarios = await res.json();
-        const user:Usuario_Contraseña = usuarios.find((usuario: Usuario_Contraseña) => usuario.email === email);
+        const user:UsuarioCompleto = usuarios.find((usuario: UsuarioCompleto) => usuario.email === email);
         return user;
     }
 }

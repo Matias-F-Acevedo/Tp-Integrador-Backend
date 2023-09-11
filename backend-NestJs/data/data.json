@@ -219,6 +219,17 @@
       "tipo_de_propiedad": "Casa",
       "estado_de_propiedad": "En alquiler",
       "id": "c0f98035"
+    },
+    {
+      "dueño": "1df54a08",
+      "precio": 380000,
+      "ubicacion": "prueba ahora",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler",
+      "id": "8a611537"
     }
   ],
   "usuario": [
