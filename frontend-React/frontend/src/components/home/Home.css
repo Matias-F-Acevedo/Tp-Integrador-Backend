@@ -89,6 +89,9 @@ img{
   text-align: center;
 }
 
+.section1 a ,.section2 a ,.section3 a{
+ text-decoration: none;
+}
 
 
 .contact-banner {
@@ -134,4 +137,25 @@ img{
 
   .view-button:hover{
     background-color: #08423a; 
+  }  
+  
+  
+  
+  
+  .comments-container{
+    display: flex;
+    gap: 35px;
+    margin-top: 20px;
+
   }
+
+  .section5 {
+   margin-top: 350px;
+  }
+
+
+  .h2-comentarios{
+    margin-top: 280px;
+  }
+
+

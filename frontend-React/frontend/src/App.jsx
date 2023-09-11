@@ -1,56 +1,37 @@
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { BrowserRouter, createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom"
 import Home from "./components/home/Home";
 import Alquilar from "./components/comprar-alquilar/Alquilar";
 import Comprar from "./components/comprar-alquilar/Comprar";
-import Contacto from "./components/archivosTemporales/Contacto";
+import Contacto from "./components/contacto/Contacto";
 import Login from "./components/login/Login";
 import Vender from "./components/vender/vender";
 import MisPropiedades from "./components/misPropiedades/MisPropiedades";
 import { UserProvider } from "./context/UserContext";
+import ProtectedRouter from "./components/utils/ProtectedRoute";
 
 
 function App() {
-
-
-    const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <Home />,
-            // errorElement: <Error />,
-        },
-        {
-            path: '/comprar',
-            element: <Comprar />,
-        },
-        {
-            path: '/vender',
-            element: <Vender />,
-        },
-        {
-            path: '/alquilar',
-            element: <Alquilar />,
-        },
-        {
-            path: '/login',
-            element: <Login />,
-        },
-        {
-            path: '/contacto',
-            element: <Contacto />,
-        },
-        {
-            path: '/mis-propiedades',
-            element: <MisPropiedades />,
-        },
-        
-    ]);
-
-
-
     return (
+
         <UserProvider>
-            <RouterProvider router={router} />
+            <BrowserRouter>
+
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/comprar" element={<Comprar />} />
+                    <Route path="/vender" element={<Vender />} />
+                    <Route path="/alquilar" element={<Alquilar />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/contacto" element={<Contacto />} />
+
+                    <Route element={<ProtectedRouter redirectPath="/login" />}>
+                        <Route path="/mis-propiedades" element={<MisPropiedades />} />
+                    </Route>
+
+                </Routes>
+
+            </BrowserRouter>
         </UserProvider>
     )
 }

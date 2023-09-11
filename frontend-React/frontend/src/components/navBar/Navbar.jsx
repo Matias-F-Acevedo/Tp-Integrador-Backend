@@ -8,7 +8,7 @@ import { UserContext } from '../../context/UserContext';
 
 
 
-function Navbar() {
+function Navbar({ componentAdditional }) {
 
     const { user, handleLogout } = useContext(UserContext);
 
@@ -30,6 +30,9 @@ function Navbar() {
             <div className="logo">
                 <Link to={"/"}> <img src="src/components/navBar/logo_fondo.jpg" alt="Logo" /></Link>
             </div>
+            <div className="componentAdditional">
+                {componentAdditional}
+            </div>
             <nav className="nav">
 
                 <ul className="nav-links">
@@ -45,11 +48,11 @@ function Navbar() {
 
             {user ?
 
-                <ul className="hola">
+                <ul className="menu-desplegable">
                     <li>Mi cuenta
                         <ul>
-                            <li><Link to={"/mis-propiedades"}>Mis propiedades</Link></li>
-                            <li><button onClick={handleLogout} className="btn-cerrar">Cerrar sesión</button></li>
+                            <li className="li1"><Link to={"/mis-propiedades"}>Mis propiedades</Link></li>
+                            <li className="li2"><button onClick={handleLogout} className="btn-cerrar">Cerrar sesión</button></li>
                         </ul>
                     </li>
                 </ul>

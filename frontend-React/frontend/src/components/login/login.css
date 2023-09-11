@@ -1,4 +1,3 @@
-
 .container-login {
     display: flex;
     background-color: #F1F1F1;
@@ -8,6 +7,7 @@
     margin-top: 5%;
     border-radius: 15px;
     margin-bottom: 13%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
 }
 
 .title-login {
@@ -15,10 +15,11 @@
     font-size: 25px;
     font-family: Roboto;
     padding-bottom: 4%;
-    background-color:#cad0d965; 
+    background-color: #cad0d965;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.158);
 
 }
 
@@ -32,8 +33,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 300px;
+    height: 350px;
     justify-content: center;
+}
+
+.registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 410px;
+    justify-content: center;
+    padding-bottom: 5px;
 }
 
 
@@ -58,26 +68,30 @@
 }
 
 
-.form-login button {
+.btn-form-login {
     background-color: #2995C2;
     border-radius: 5px;
-    width: 60%;
-    height: 40%;
+    width: 140px;
+    height: 40px;
     border: none;
     color: white;
     font-family: Roboto;
     font-weight: 600;
 }
+
+
+
 .form-login button:hover {
     background-color: #2995C2;
     transform: scale(1.1);
 }
+
 .form-login button:active {
     background-color: #2995C2;
     color: white;
 }
 
-.container-general-welcome{
+.container-general-welcome {
     display: flex;
     flex-direction: column;
     padding-top: 70px;
@@ -92,16 +106,21 @@
     width: 50%;
     border-radius: 10px;
     font-family: Roboto;
-    height: 100px; 
+    height: 100px;
+    margin-bottom: 350px;
 }
-.container-login-welcome h1{
+
+.container-login-welcome h1 {
     font-size: 30px;
     margin-top: auto;
+    color: white;
 }
-.container-login-welcome h2{
+
+.container-login-welcome h2 {
     font-size: 30px;
     margin-bottom: auto;
 }
+
 .img-pet-welcome {
     margin: 20px;
     display: flex;
@@ -116,6 +135,31 @@
 }
 
 
+.container-btn-registrarse {
+    margin-top: 15px;
+}
+
+.btn-registrarse {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    color: #2995C2;
+    font-family: Roboto;
+    border: 1px solid #2995C2;
+    font-weight: 600;
+}
+
+.btn-registrarse:hover {
+    transform: scale(1.1);
+
+}
+
+.btn-registrarse:active {
+    transform: scale(1.2);
+}
+
+
 
 @media (max-width: 500px) {
     .container-login {
@@ -126,23 +170,26 @@
     .form-login input {
         width: 70%;
     }
+
     .container-login-welcome {
         margin: auto;
         width: 90%;
         border-radius: 10px;
     }
-    .container-login-welcome h1{
+
+    .container-login-welcome h1 {
         font-size: 30px;
     }
-    
+
     .img-pet-welcome {
         margin: 20px;
         display: flex;
         justify-content: center;
         margin-bottom: 10%;
-        
+
     }
-    .img-pet-welcome img{
+
+    .img-pet-welcome img {
         width: 300px;
     }
 }
@@ -153,23 +200,26 @@
         zoom: 1.2;
         width: 70%;
     }
+
     .container-login-welcome {
         margin: auto;
         width: 90%;
         border-radius: 10px;
     }
-    .container-login-welcome h1{
+
+    .container-login-welcome h1 {
         font-size: 40px;
     }
-    
+
     .img-pet-welcome {
         margin: 20px;
         display: flex;
         justify-content: center;
         margin-bottom: 10%;
-        
+
     }
-    .img-pet-welcome img{
+
+    .img-pet-welcome img {
         width: 400px;
     }
 
@@ -185,23 +235,26 @@
         zoom: 1.1;
 
     }
+
     .container-login-welcome {
         margin: auto;
         width: 90%;
         border-radius: 10px;
     }
-    .container-login-welcome h1{
+
+    .container-login-welcome h1 {
         font-size: 30px;
     }
-    
+
     .img-pet-welcome {
         margin: 20px;
         display: flex;
         justify-content: center;
         margin-bottom: 10%;
-        
+
     }
-    .img-pet-welcome img{
+
+    .img-pet-welcome img {
         width: 300px;
     }
 
