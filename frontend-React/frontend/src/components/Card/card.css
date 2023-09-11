@@ -1,0 +1,27 @@
+.card-container{
+    width: 340px;
+    height: 454px;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 5px 0px rgba(200, 200, 200, 0.7);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.star-container{
+    display: flex;
+    gap: 5px;
+}
+
+.bday{
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 8px;
+}
+
+.people-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}

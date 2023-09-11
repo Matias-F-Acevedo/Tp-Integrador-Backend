@@ -2,7 +2,9 @@ import React from 'react'
 import Navbar from './navBar/Navbar.jsx'
 import './home/Home.css'
 import Footer from '../components/Footer/Footer.jsx'
-
+import Card from '../components/Card/Card.jsx'
+import Img from '../../public/smile.webp'
+import Img1 from '../../public/maxi_iglesias-kXKH--620x349@abc.jpeg'
 
 const Home = () => {
   return (
@@ -49,6 +51,11 @@ const Home = () => {
         <p>Ve sus comentarios sobre nuestro servicio</p>
         <div className="comments-container">
           {/*comentarios de los clientes */}
+          <Card stars={5} name="Sofia Peralta" bday="09/11/2022" text="Desde que ingrese me senti con una gran confianza, los agentes me brindaron mucha comodidad" img={Img}/>
+          <Card stars={5} name="Sofia Peralta" bday="09/11/2022" text="Me genera mucha confianza, compramos nuestra primera casa y todo fue asombroso, hermosa experiencia" img={Img}/>
+          <Card stars={5} name="Carlos vela" bday="12/11/2022" text="El proceso de seleccion y para mirar fue exelente, estamos muy contentos con el resultado de la compra" img={Img1}/>
+
+
           </div>
         </div>
       </section>
