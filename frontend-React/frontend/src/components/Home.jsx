@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './navBar/Navbar.jsx'
 import './home/Home.css'
+import Footer from '../components/Footer/Footer.jsx'
 
 
 const Home = () => {
@@ -66,6 +67,7 @@ const Home = () => {
             Contacto</a>
       </div>
     </section>
+    <Footer/>  
     </>
   );
 };
