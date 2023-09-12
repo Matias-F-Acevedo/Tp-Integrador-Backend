@@ -22,7 +22,7 @@ const FormContact = () => {
               <input type="checkbox" id="parOnForm" name="acuerdo" required />
               Acepto los <a href="#">Terminos y condiciones</a>
             </label>
-            <input className="botons" type="submit" value="Send Message" />
+            <input className="botons" type="submit" value="Enviar Mensaje" />
           </form>
         </div>
       <Footer></Footer>
