@@ -17,9 +17,9 @@ export default function Footer () {
             <h4>Encontrá mas propiedades</h4>
             <span><Link to="/comprar">Comprar</Link></span>
             <span><Link to="/alquilar">Alquilar</Link></span>
-            <span><Link to="/">Vender</Link></span>
+            <span><Link to="/contacto">Vender</Link></span>
             <span><Link to="/">Oficinas</Link></span>
-            <span><Link to="/">Contratar</Link></span>
+            <span><Link to="/contacto">Contratar</Link></span>
           </div>
           <div className="logo-container">
             <h4>Nosotros</h4>
@@ -43,9 +43,9 @@ export default function Footer () {
         <hr />
         <div className="terms-container">
           <ul>
-            <li>Remax Argentina - Propiedades</li>
+            <li>HomeMarket Argentina - Propiedades</li>
             <li>Todos los derechos reservados</li>
-            <li>2023 Remax</li>
+            <li>Copyright © 2023 HomeMakert</li>
           </ul>
           <ul className="terms-links">
             <li>Términos y Condiciones</li>

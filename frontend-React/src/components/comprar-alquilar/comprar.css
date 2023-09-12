@@ -94,3 +94,17 @@
   font-weight: 400;
   line-height: normal;
 }
+
+.action {
+  background-color: #247499; 
+    color: white; 
+    padding: 8px 20px; 
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+  
+.action:hover {
+  background-color: #16415a;
+}

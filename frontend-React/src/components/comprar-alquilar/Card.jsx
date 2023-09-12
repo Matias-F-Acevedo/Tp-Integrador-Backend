@@ -24,7 +24,7 @@ function Card({ propiedad, index, button}) {
         <p className='seccion-ambientes-tipo'><span className='especificacion-m2'>Tipo:</span > {propiedad.tipo_de_propiedad}</p>
       </section>
        {button?
-        <button onClick={() => {navigate("/Comprar-form", {replace: true, state:{propietarioId} })}}>Datos del vendedor</button>
+        <button className='action' onClick={() => {navigate("/Comprar-form", {replace: true, state:{propietarioId} })}}>Datos del vendedor</button>
       :
       <></>}
     </div>

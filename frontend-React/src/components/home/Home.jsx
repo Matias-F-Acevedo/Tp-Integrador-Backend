@@ -4,8 +4,9 @@ import './Home.css'
 import { Link } from "react-router-dom"
 import Footer from '../footer/Footer.jsx'
 import CardComments from '../Card/CardComments.jsx'
-import Img from '../home/smile.webp'
-import Img1 from '../home/maxi_iglesias-kXKH--620x349@abc.jpeg'
+import Img from '../home/imag4.webp'
+import Img1 from '../home/imag3.jpeg'
+
 const Home = () => {
   return (
     <>
