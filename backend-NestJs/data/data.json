@@ -2,36 +2,36 @@
   "propiedad": [
     {
       "dueño": "1df54a08",
-      "precio": 20999,
+      "precio": 30000,
       "ubicacion": "Centro Histórico",
       "superficieTotal": 110,
       "superficieCubierta": 90,
       "ambientes": 3,
       "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En alquiler",
+      "estado_de_propiedad": "En venta",
       "id": "1p283d4e"
     },
     {
-      "id": "e851a7da",
       "dueño": "1df54a08",
       "precio": 380000,
-      "ubicacion": "Barrio Exclusivo",
+      "ubicacion": "Benito Juarez",
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
       "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En alquiler"
+      "estado_de_propiedad": "En alquiler",
+      "id": "e851a7da"
     },
     {
-      "id": "37f3e457",
       "dueño": "1df54a08",
       "precio": 220000,
-      "ubicacion": "Zona Financiera",
+      "ubicacion": "Zona sur",
       "superficieTotal": 130,
       "superficieCubierta": 110,
       "ambientes": 4,
       "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En alquiler"
+      "estado_de_propiedad": "En alquiler",
+      "id": "37f3e457"
     },
     {
       "id": "bd34f990",
@@ -45,15 +45,15 @@
       "estado_de_propiedad": "En alquiler"
     },
     {
-      "id": "4acb8691",
       "dueño": "1df54a08",
       "precio": 190000,
-      "ubicacion": "Zona Residencial",
+      "ubicacion": "Zona sur",
       "superficieTotal": 100,
       "superficieCubierta": 80,
       "ambientes": 3,
       "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En alquiler"
+      "estado_de_propiedad": "En alquiler",
+      "id": "4acb8691"
     },
     {
       "dueño": "1df54a08",

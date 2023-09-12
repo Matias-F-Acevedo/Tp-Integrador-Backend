@@ -11,12 +11,16 @@ import { Request } from 'express';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
+    // instancia del jwtService:
     constructor(private jwtService: JwtService) { }
 
 
 
-
+    // funcion que debemos implementar a causa de la interfaz (CanActivate):
     async canActivate(context: ExecutionContext): Promise<boolean> {
+
+        // ExecutionContext :Estas utilidades proporcionan información sobre el contexto de ejecución actual que se puede utilizar para crear protecciones , filtros e interceptores genéricos que pueden funcionar en un amplio conjunto de controladores, métodos y contextos de ejecución.
+
         //switchToHttp(): es un método proporcionado por el objeto de contexto (context). Este método permite cambiar el contexto a uno específico para las solicitudes HTTP.
 
         // getRequest(): Una vez que hemos cambiado al contexto de HTTP con switchToHttp(), podemos llamar al método getRequest() para obtener el objeto de solicitud HTTP actual.
