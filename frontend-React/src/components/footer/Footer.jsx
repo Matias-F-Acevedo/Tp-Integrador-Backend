@@ -17,15 +17,15 @@ export default function Footer () {
             <h4>Encontrá mas propiedades</h4>
             <span><Link to="/comprar">Comprar</Link></span>
             <span><Link to="/alquilar">Alquilar</Link></span>
-            <span><Link to="/vender">Vender</Link></span>
-            <span><Link to="/oficinas">Oficinas</Link></span>
-            <span><Link to="/contratar">Contratar</Link></span>
+            <span><Link to="/">Vender</Link></span>
+            <span><Link to="/">Oficinas</Link></span>
+            <span><Link to="/">Contratar</Link></span>
           </div>
           <div className="logo-container">
             <h4>Nosotros</h4>
-            <span><Link to="/blog">Blog</Link></span>
-            <span><Link to="/noticias">Noticias</Link></span>
-            <span><Link to="/sobre">Sobre</Link></span>
+            <span><Link to="/">Blog</Link></span>
+            <span><Link to="/">Noticias</Link></span>
+            <span><Link to="/">Sobre</Link></span>
             <span><Link to="/contacto">Contacto</Link></span>
           </div>
           <div className="icons-container">

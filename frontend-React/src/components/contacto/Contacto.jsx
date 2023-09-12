@@ -12,7 +12,7 @@ const FormContact = () => {
         <div id="divFormContacto">
           <form id="formContacto" action="https://formsubmit.co/matucagliero95@gmail.com" method="POST" className="form-register">
             <h4>Contacto</h4>
-            <input  className="controls" type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Ingrse su nombre completo" />
+            <input  className="controls" type="text" name="nombreCompleto" id="nombreCompleto" placeholder="Ingrese su nombre completo" />
             <input  className="controls" type="email" name="correo" id="correo" placeholder="Ingrese su email" />
             <input  className="controls" type="tel" id="phone" name="phone" placeholder='Ingrese su numero telefonico' required
               pattern="^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$" />

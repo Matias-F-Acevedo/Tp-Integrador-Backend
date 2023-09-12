@@ -2,7 +2,7 @@
   "propiedad": [
     {
       "dueño": "1df54a08",
-      "precio": 22,
+      "precio": 20999,
       "ubicacion": "Centro Histórico",
       "superficieTotal": 110,
       "superficieCubierta": 90,
@@ -56,37 +56,26 @@
       "estado_de_propiedad": "En alquiler"
     },
     {
-      "id": "5b283d6d",
       "dueño": "1df54a08",
       "precio": 33424,
-      "ubicacion": "tandil",
+      "ubicacion": "Tandil",
       "superficieTotal": 345345,
       "superficieCubierta": 345345,
       "ambientes": 345,
       "tipo_de_propiedad": "casa",
-      "estado_de_propiedad": "En venta"
+      "estado_de_propiedad": "En venta",
+      "id": "5b283d6d"
     },
     {
-      "id": "9d5473e0",
       "dueño": "1df54a08",
       "precio": 18,
-      "ubicacion": "hola",
+      "ubicacion": "Tandil",
       "superficieTotal": 1540,
       "superficieCubierta": 1240,
       "ambientes": 43,
       "tipo_de_propiedad": "casa",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "id": "070e9017",
-      "dueño": "1df54a08",
-      "precio": 18,
-      "ubicacion": "Barrio Residencial",
-      "superficieTotal": 150,
-      "superficieCubierta": 120,
-      "ambientes": 3,
-      "tipo_de_propiedad": "Departamento",
-      "estado_de_propiedad": "En venta"
+      "estado_de_propiedad": "En alquiler",
+      "id": "9d5473e0"
     },
     {
       "id": "0f57041e",
@@ -102,84 +91,84 @@
     {
       "dueño": "1df54a08",
       "precio": 380000,
-      "ubicacion": "hola",
+      "ubicacion": "Benito Juarez",
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
       "tipo_de_propiedad": "Casa",
-      "id": "4ca9445e",
-      "estado_de_propiedad": "En venta"
+      "estado_de_propiedad": "En venta",
+      "id": "4ca9445e"
     },
     {
       "dueño": "1df54a08",
       "precio": 380000,
-      "ubicacion": "hola22",
-      "superficieTotal": 450,
-      "superficieCubierta": 320,
-      "ambientes": 6,
-      "tipo_de_propiedad": "Casa",
-      "id": "a73d7950",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": "1df54a08",
-      "precio": 380000,
-      "ubicacion": "prueba de id 1",
-      "superficieTotal": 450,
-      "superficieCubierta": 320,
-      "ambientes": 6,
-      "tipo_de_propiedad": "Casa",
-      "id": "daced890",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": "1df54a08",
-      "precio": 380000,
-      "ubicacion": "prueba de id 2",
-      "superficieTotal": 450,
-      "superficieCubierta": 320,
-      "ambientes": 6,
-      "tipo_de_propiedad": "Casa",
-      "id": "631cf086",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "id": "cd85e0a6",
-      "dueño": "1df54a08",
-      "precio": 380000,
-      "ubicacion": "prueba 567567",
-      "superficieTotal": 450,
-      "superficieCubierta": 320,
-      "ambientes": 6,
-      "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "id": "db81847a",
-      "dueño": "1df54a08",
-      "precio": 380000,
-      "ubicacion": "prueba 4",
-      "superficieTotal": 450,
-      "superficieCubierta": 320,
-      "ambientes": 6,
-      "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En venta"
-    },
-    {
-      "dueño": "1df54a08",
-      "precio": 380000,
-      "ubicacion": "prueba 5",
+      "ubicacion": "Tandil",
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
       "tipo_de_propiedad": "Casa",
       "estado_de_propiedad": "En alquiler",
+      "id": "a73d7950"
+    },
+    {
+      "dueño": "1df54a08",
+      "precio": 380000,
+      "ubicacion": "Benito Juarez",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En venta",
+      "id": "daced890"
+    },
+    {
+      "dueño": "1df54a08",
+      "precio": 380000,
+      "ubicacion": "Benito Juarez",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En venta",
+      "id": "631cf086"
+    },
+    {
+      "dueño": "1df54a08",
+      "precio": 380000,
+      "ubicacion": "Necochea",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler",
+      "id": "cd85e0a6"
+    },
+    {
+      "dueño": "1df54a08",
+      "precio": 380000,
+      "ubicacion": "Necochea",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En venta",
+      "id": "db81847a"
+    },
+    {
+      "dueño": "1df54a08",
+      "precio": 380000,
+      "ubicacion": "Benito Juarez",
+      "superficieTotal": 450,
+      "superficieCubierta": 320,
+      "ambientes": 6,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En venta",
       "id": "f09424cc"
     },
     {
       "dueño": "1df54a08",
       "precio": 380000,
-      "ubicacion": "prueba 6",
+      "ubicacion": "Barker",
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
@@ -188,7 +177,7 @@
       "id": "360aa7f6"
     },
     {
-      "dueño": "6654ad01",
+      "dueño": "1df54a08",
       "precio": 280000,
       "ubicacion": "Playa Serena",
       "superficieTotal": 350,
@@ -199,7 +188,7 @@
       "id": "aaa2f14f"
     },
     {
-      "dueño": "6654ad00",
+      "dueño": "1df54a08",
       "precio": 280000,
       "ubicacion": "Tandil",
       "superficieTotal": 350,
@@ -210,9 +199,9 @@
       "id": "14be15e2"
     },
     {
-      "dueño": "6654ad00",
+      "dueño": "1df54a08",
       "precio": 280000,
-      "ubicacion": "prueba auth",
+      "ubicacion": "Barker",
       "superficieTotal": 350,
       "superficieCubierta": 240,
       "ambientes": 6,
@@ -223,13 +212,24 @@
     {
       "dueño": "1df54a08",
       "precio": 380000,
-      "ubicacion": "prueba ahora",
+      "ubicacion": "Barker",
       "superficieTotal": 450,
       "superficieCubierta": 320,
       "ambientes": 6,
       "tipo_de_propiedad": "Casa",
-      "estado_de_propiedad": "En alquiler",
+      "estado_de_propiedad": "En venta",
       "id": "8a611537"
+    },
+    {
+      "dueño": "4d07acaf",
+      "precio": 40999,
+      "ubicacion": "Benito Juarez",
+      "superficieTotal": 200,
+      "superficieCubierta": 100,
+      "ambientes": 2,
+      "tipo_de_propiedad": "Casa",
+      "estado_de_propiedad": "En alquiler",
+      "id": "9ada87ff"
     }
   ],
   "usuario": [
@@ -239,6 +239,13 @@
       "email": "matias.acevedo@gmail.com",
       "contraseña": "$2b$08$hDqsytByq7eYBpKiOIWszeCW3rDWt46HUh5t7HrhPbM4C7GkFPgJS",
       "id": "1df54a08"
+    },
+    {
+      "nombre": "matias2",
+      "apellido": "acevedo2",
+      "email": "matias2.acevedo2@hotmail.com",
+      "contraseña": "$2b$08$NjO4bYgXV97OJb6F2KjX.uo/a3ZkvZV0fLbM7jvK8tS.g3Z2ckWqu",
+      "id": "4d07acaf"
     }
   ]
 }

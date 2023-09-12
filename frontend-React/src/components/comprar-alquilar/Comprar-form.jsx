@@ -11,7 +11,6 @@ function ComprarForm() {
   const [propietario, setPropietario] = useState();
   const location = useLocation();
     const Id = location.state.propietarioId;
-    console.log(Id)
   useEffect(() => {
     async function fetchDataUsuario() {
       try {
@@ -55,7 +54,7 @@ console.log
                   <p className="valor">{propietario.email}</p>
               </div>
           </div>
-            <h1 className='titulo-h2'>Propiedades de {propietario.nombre}</h1>
+            <h1 className='titulo-h2'>Propiedades de {propietario.nombre.toUpperCase()}</h1>
       <div className="tarjetas">
           {propiedades.map((propiedad, index) => (
               <Card propiedad={propiedad} index={index} button={false} key={index}></Card>

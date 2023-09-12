@@ -62,13 +62,10 @@ const Home = () => {
           <p>
             En caso de tener alguna duda o problema
             <br />no dudes en contactarnos</p>
-          <a
-            href="https://wa.me/numero-de-WhatsApp"
-            className="whatsapp-button"
-            target="_blank" /*indica que debe abrir el enlace en una nueva ventana sin reemplazar la actual.*/
-            rel="noopener noreferrer" /* Evita que la página recien abierta tenga acceso a la página de origen. Protege la privacidad del usuario.*/
-          >
-            Contacto</a>
+            <Link to={"/contacto"} className='whatsapp-button' 
+            target='_blank' /*indica que debe abrir el enlace en una nueva ventana sin reemplazar la actual.*/
+            rel='noopener noreferrer'/* Evita que la página recien abierta tenga acceso a la página de origen. Protege la privacidad del usuario.*/
+            >Contacto</Link>
         </div>
       </section>
       <Footer></Footer>

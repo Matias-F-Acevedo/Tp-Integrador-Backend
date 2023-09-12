@@ -20,7 +20,6 @@ export class UsuarioController {
     }
   }
 
-  @UseGuards(AuthGuard)
   @Get("/:id")
   async getById(@Res() res: Response, @Param("id") id: string): Promise<Response<Usuario>> {
 

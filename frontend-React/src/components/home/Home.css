@@ -140,7 +140,9 @@ img{
   }  
   
   
-  
+  .view-button{
+    position: relative;
+  }  
   
   .comments-container{
     display: flex;
