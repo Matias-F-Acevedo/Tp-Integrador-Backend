@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import "./comprar.css"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Card({ propiedad, index, button}) {
-
+  const navigate = useNavigate()
+  const propietarioId = propiedad.dueño;
   return (
 
     <div key={index} className="tarjeta">
@@ -23,9 +24,7 @@ function Card({ propiedad, index, button}) {
         <p className='seccion-ambientes-tipo'><span className='especificacion-m2'>Tipo:</span > {propiedad.tipo_de_propiedad}</p>
       </section>
        {button?
-        <Link>
-        <button>Datos del vendedor</button>
-      </Link>
+        <button onClick={() => {navigate("/Comprar-form", {replace: true, state:{propietarioId} })}}>Datos del vendedor</button>
       :
       <></>}
     </div>

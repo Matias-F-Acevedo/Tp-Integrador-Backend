@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../navBar/Navbar';
+import Navbar from '../navbar/Navbar';
 import Searcher from '../navBar/Searcher';
 import "./comprar.css"
 import Card from './Card';

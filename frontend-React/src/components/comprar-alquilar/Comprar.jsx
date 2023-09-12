@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./comprar.css"
-import Navbar from '../navBar/Navbar';
+import Navbar from '../navbar/Navbar';
 import Searcher from '../navBar/Searcher';
 import Card from './Card';
 import Footer from '../footer/Footer';

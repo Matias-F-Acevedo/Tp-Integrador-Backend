@@ -1,51 +1,73 @@
-// import React, { useEffect, useState } from 'react';
-// import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
+import Card from './Card';
+import PropiedadesXduenio from './propiedadesXdueño';
+import "./comprar-form.css";
+const URL = "http://localhost:3000/api/propiedad";
 
-// function ComprarForm() {
-//   const [propietario, setPropietario] = useState();
-//   const location = useLocation();
-//  console.log(location)
+function ComprarForm() {
+  const [propietario, setPropietario] = useState();
+  const location = useLocation();
+    const Id = location.state.propietarioId;
+    console.log(Id)
+  useEffect(() => {
+    async function fetchDataUsuario() {
+      try {
+        if (!Id) {
 
-//   useEffect(() => {
-//     async function fetchDataUsuario() {
-//       try {
-//         if (!location.state.Id) {
-//           // Si propietarioId no está definido, puedes manejarlo de manera apropiada o mostrar un mensaje de error.
-//           console.error('propietarioId no está definido.');
-//           return;
-//         }
+          console.error('propietarioId no está definido.');
+          return;
+        }
 
-//         const response = await fetch(`http://localhost:3000/api/usuario/${location.state.Id}`);
-//         if (!response.ok) {
-//           throw new Error(`Network response was not ok: ${response.status}`);
-//         }
-//         const data = await response.json();
-//         setPropietario(data);
-//       } catch (error) {
-//         console.error('Error fetching data:', error);
-//       }
-//     }
+        const response = await fetch(`http://localhost:3000/api/usuario/${Id}`);
+        if (!response.ok) {
+          throw new Error(`Network response was not ok: ${response.status}`);
+        }
+        const data = await response.json();
+        setPropietario(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
 
-//     fetchDataUsuario();
-//   }, [location.state.Id]);
+    fetchDataUsuario();
+  }, [Id]);
+  const propiedades = PropiedadesXduenio(Id)
 
-//   if (!propietario) {
-//     return <div>Loading...</div>; 
-//   }
+console.log
+  if (!propietario) {
+    return <div>Loading...</div>; 
+  }
 
-//   return (
-//     <div>
-//      <h2>Datos del Vendedor</h2>
-//         <div>
-//           <p>Nombre: {propietario.nombre}</p>
-//           <p>Apellido: {propietario.apellido}</p>
-//           <p>Email: {propietario.email}</p>
-//         </div>
-//     </div>
-//   );
-// }
+  return (
+    <>
+    <Navbar/>
+          <div className='datos-vendedor-div'>
+              <h2 className='titulo-h2'>Datos del Vendedor</h2>
+              <div>
+                  <p className="etiqueta">Nombre:</p>
+                  <p className="valor">{propietario.nombre}</p>
+                  <p className="etiqueta">Apellido:</p>
+                  <p className="valor">{propietario.apellido}</p>
+                  <p className="etiqueta">Email:</p>
+                  <p className="valor">{propietario.email}</p>
+              </div>
+          </div>
+            <h1 className='titulo-h2'>Propiedades de {propietario.nombre}</h1>
+      <div className="tarjetas">
+          {propiedades.map((propiedad, index) => (
+              <Card propiedad={propiedad} index={index} button={false} key={index}></Card>
+          ))}
+        </div>
+      <Footer></Footer>
+      </>
+      
+  );
+}
 
-// export default ComprarForm;
+export default ComprarForm;
 
 
 
